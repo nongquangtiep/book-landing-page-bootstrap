@@ -2,32 +2,33 @@
 <html lang="vi">
 <head>
     <meta charset="utf-8">
-    <title>Bảng đơn giản trong HTML</title>
+    <title>Gộp ô trong bảng</title>
 </head>
 <body>
 
-    <h2>Danh sách học sinh</h2>
+    <h2>Thời khóa biểu</h2>
 
     <table border="1">
         <tr>
-            <th>Họ và Tên</th>
-            <th>Tuổi</th>
-            <th>Lớp</th>
+            <th>Thứ</th>
+            <th>Môn học</th>
+            <th>Giáo viên</th>
         </tr>
         <tr>
-            <td>Nguyễn Văn A</td>
-            <td>15</td>
-            <td>10A1</td>
+            <!-- Gộp 2 hàng cho ô Thứ Hai -->
+            <td rowspan="2">Thứ Hai</td>
+            <td>Toán</td>
+            <td>Thầy Nam</td>
         </tr>
         <tr>
-            <td>Trần Thị B</td>
-            <td>16</td>
-            <td>11B2</td>
+            <!-- Hàng thứ hai chỉ cần 2 ô vì ô đầu tiên đã bị Thứ Hai chiếm -->
+            <td>Văn</td>
+            <td>Cô Hạnh</td>
         </tr>
         <tr>
-            <td>Lê Văn C</td>
-            <td>17</td>
-            <td>12C3</td>
+            <td>Thứ Ba</td>
+            <!-- Gộp 2 cột Môn học và Giáo viên thành 1 ô -->
+            <td colspan="2">Nghỉ học</td>
         </tr>
     </table>
 
