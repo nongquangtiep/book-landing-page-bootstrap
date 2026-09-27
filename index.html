@@ -1,27 +1,33 @@
-v.internal-heading {
-            color: green;
-        }
-        .internal-text {
-            color: darkorange;
-        }
-    </style>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng bộ chọn CSS</title>
+    <!-- Nhúng file CSS ngoài -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- PHẦN 1: Thay đổi màu sắc bằng Inline-style -->
-    <h1 style="color: blue;">Tiêu đề sử dụng Inline-style</h1>
-    <p style="color: red;">Đoạn văn này được đổi màu bằng thuộc tính inline-style.</p>
+    <div class="container">
+        <!-- Tiêu đề h1 -->
+        <h1 id="main-title">Trang web của tôi</h1>
 
-    <hr>
+        <!-- Đoạn văn mô tả bản thân -->
+        <p class="description">
+            Xin chào! Tôi là một lập trình viên đam mê khám phá công nghệ mới và xây dựng các giao diện web đẹp mắt, tối ưu trải nghiệm người dùng.
+        </p>
 
-    <!-- PHẦN 2: Thay đổi màu sắc bằng Internal-style -->
-    <h1 class="internal-heading">Tiêu đề sử dụng Internal-style</h1>
-    <p class="internal-text">Đoạn văn này được đổi màu bằng CSS khai báo trong internal-style.</p>
+        <!-- Danh sách sở thích -->
+        <ul class="hobby-list">
+            <li class="hobby-reading">Đọc sách công nghệ</li>
+            <li class="hobby-coding">Lập trình web</li>
+            <li class="hobby-sports">Chơi thể thao rèn luyện sức khỏe</li>
+        </ul>
 
-    <hr>
-
-    <!-- PHẦN 3: Thay đổi màu sắc bằng External-style -->
-    <h1 class="external-heading">Tiêu đề sử dụng External-style</h1>
-    <p class="external-text">Đoạn văn này được đổi màu bằng file style.css bên ngoài.</p>
+        <!-- Nút bấm -->
+        <button type="button" class="btn-action">Nhấn vào đây</button>
+    </div>
 
 </body>
+</html>

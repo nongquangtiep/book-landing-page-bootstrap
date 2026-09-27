@@ -1,99 +1,33 @@
-/* Bộ chọn toàn cục (Universal Selector) để reset lề */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng bộ chọn CSS</title>
+    <!-- Nhúng file CSS ngoài -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* 1. Đổi màu nền của trang (Element Selector) */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0f4f8; /* Màu nền nhẹ nhàng của trang */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+    <div class="container">
+        <!-- Tiêu đề h1 -->
+        <h1 id="main-title">Trang web của tôi</h1>
 
-/* Class Selector: Khung bao ngoài */
-.container {
-    background-color: #ffffff;
-    max-width: 500px;
-    width: 90%;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+        <!-- Đoạn văn mô tả bản thân -->
+        <p class="description">
+            Xin chào! Tôi là một lập trình viên đam mê khám phá công nghệ mới và xây dựng các giao diện web đẹp mắt, tối ưu trải nghiệm người dùng.
+        </p>
 
-/* 2. Căn giữa và định dạng tiêu đề h1 (ID Selector) */
-#main-title {
-    color: #1e3a8a;
-    font-size: 26px;
-    margin-bottom: 16px;
-    text-align: center;
-}
+        <!-- Danh sách sở thích -->
+        <ul class="hobby-list">
+            <li class="hobby-reading">Đọc sách công nghệ</li>
+            <li class="hobby-coding">Lập trình web</li>
+            <li class="hobby-sports">Chơi thể thao rèn luyện sức khỏe</li>
+        </ul>
 
-/* Class Selector: Đoạn văn bản mô tả */
-.description {
-    color: #475569;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    text-align: justify;
-}
+        <!-- Nút bấm -->
+        <button type="button" class="btn-action">Nhấn vào đây</button>
+    </div>
 
-/* 3. Định dạng danh sách với các màu sắc khác nhau (Class & Pseudo-classes) */
-.hobby-list {
-    list-style-type: square;
-    text-align: left;
-    margin: 0 auto 24px auto;
-    padding-left: 24px;
-}
-
-.hobby-list li {
-    padding: 8px 12px;
-    margin-bottom: 8px;
-    border-radius: 4px;
-    font-weight: 500;
-}
-
-/* Mỗi mục danh sách một tông màu riêng biệt */
-.hobby-reading {
-    color: #b45309;
-    background-color: #fef3c7;
-}
-
-.hobby-coding {
-    color: #0369a1;
-    background-color: #e0f2fe;
-}
-
-.hobby-sports {
-    color: #15803d;
-    background-color: #dcfce7;
-}
-
-/* Định dạng cơ bản cho nút bấm */
-.btn-action {
-    background-color: #2563eb;
-    color: #ffffff;
-    border: none;
-    padding: 12px 28px;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* 4. Pseudo-class (:hover) tạo hiệu ứng khi rê chuột vào nút */
-.btn-action:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-}
-
-/* Hiệu ứng khi bấm nút (Pseudo-class :active) */
-.btn-action:active {
-    transform: translateY(0);
-}
+</body>
+</html>
