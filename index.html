@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="utf-8">
-    <title>Danh Sách Sản Phẩm</title>
+    <title>Lịch họp công ty</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -42,43 +42,55 @@
         }
 
         tbody tr:nth-child(even) {
-            background-color: #f1f5f9;
+            background-color: #f8fafc;
+        }
+
+        .highlight {
+            background-color: #fef3c7;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Danh sách sản phẩm</h1>
+        <h1>Lịch họp công ty</h1>
 
         <table>
             <thead>
                 <tr>
-                    <th>Tên sản phẩm</th>
-                    <th>Giá</th>
-                    <th>Số lượng</th>
+                    <th>Ngày</th>
+                    <th>Giờ</th>
+                    <th>Nội dung cuộc họp</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- Thứ Hai có 2 cuộc họp: dùng rowspan="2" cho cột Ngày -->
                 <tr>
-                    <td>Laptop Dell Inspiron</td>
-                    <td>16,500,000 VNĐ</td>
-                    <td>5</td>
+                    <td rowspan="2"><b>Thứ Hai (28/09)</b></td>
+                    <td>08:30 - 09:30</td>
+                    <td>Họp giao ban đầu tuần phòng Kỹ thuật</td>
                 </tr>
                 <tr>
-                    <td>Chuột không dây Logitech</td>
-                    <td>350,000 VNĐ</td>
-                    <td>20</td>
+                    <td>14:00 - 15:30</td>
+                    <td>Đánh giá tiến độ dự án Website</td>
+                </tr>
+
+                <!-- Thứ Ba có sự kiện kéo dài cả buổi: dùng colspan="2" gộp Giờ và Nội dung -->
+                <tr>
+                    <td><b>Thứ Ba (29/09)</b></td>
+                    <td colspan="2" class="highlight">Workshop đào tạo nội bộ (Kéo dài cả ngày: 08:30 - 17:00)</td>
+                </tr>
+
+                <!-- Thứ Tư có 2 cuộc họp: dùng rowspan="2" -->
+                <tr>
+                    <td rowspan="2"><b>Thứ Tư (30/09)</b></td>
+                    <td>09:00 - 10:30</td>
+                    <td>Phỏng vấn ứng viên Frontend</td>
                 </tr>
                 <tr>
-                    <td>Bàn phím cơ DareU</td>
-                    <td>850,000 VNĐ</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>Tai nghe Gaming Kingston HyperX</td>
-                    <td>1,290,000 VNĐ</td>
-                    <td>8</td>
+                    <td>15:00 - 16:30</td>
+                    <td>Báo cáo tiến độ Sprint với khách hàng</td>
                 </tr>
             </tbody>
         </table>
