@@ -3,39 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục với display</title>
+    <title>Bố cục với Float và Overflow</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Bố cục trang web với display</h1>
-    </header>
+    <div class="wrapper">
+        <h1>Bố cục trang với float và overflow</h1>
 
-    <nav>
-        <a href="#">Trang chủ</a>
-        <a href="#">Giới thiệu</a>
-        <a href="#">Dịch vụ</a>
-        <a href="#">Liên hệ</a>
-    </nav>
-
-    <section>
-        <div class="box">
-            <h3>Cột 1</h3>
-            <p>Nội dung giới thiệu dịch vụ và các tính năng chính của trang web.</p>
-        </div><div class="box">
-            <h3>Cột 2</h3>
-            <p>Khối hiển thị thông tin sản phẩm và các giải pháp công nghệ nổi bật.</p>
-        </div><div class="box">
-            <h3>Cột 3</h3>
-            <p>Phần kết nối khách hàng, hỗ trợ tư vấn và tiếp nhận ý kiến đóng góp.</p>
+        <!-- Khối chứa 2 cột sử dụng Float -->
+        <div class="container">
+            <div class="left-column">
+                <h3>Cột Trái (Float Left)</h3>
+                <p>Nội dung bên trái hiển thị thông tin bài viết chính hoặc khu vực giới thiệu tổng quan.</p>
+            </div>
+            <div class="right-column">
+                <h3>Cột Phải (Float Right)</h3>
+                <p>Nội dung bên phải đóng vai trò là sidebar hỗ trợ hiển thị các tiện ích bổ sung.</p>
+            </div>
         </div>
-    </section>
 
-    <footer>
-        <p>Bản quyền &copy; 2026 CodeGym. Tất cả các quyền được bảo lưu.</p>
-    </footer>
+        <!-- Khối chứa nội dung dài có thanh cuộn overflow -->
+        <div class="overflow-box">
+            <h4>Khối kiểm tra Overflow:</h4>
+            Đây là nội dung rất dài mà chúng ta kiểm tra overflow. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </div>
 
 </body>
 </html>
