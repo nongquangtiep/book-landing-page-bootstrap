@@ -3,56 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Cá Nhân</title>
-    <!-- Kết nối tệp CSS ngoài -->
+    <title>Nhúng CSS vào trang HTML</title>
+
+    <!-- PHẦN 3: Nhúng bằng External-style từ file style.css -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- PHẦN 2: Nhúng bằng Internal-style trong thẻ style ở head -->
+    <style>
+        .internal-heading {
+            color: green;
+        }
+        .internal-text {
+            color: darkorange;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Chào mừng đến với trang web cá nhân của tôi</h1>
-    </header>
+    <!-- PHẦN 1: Thay đổi màu sắc bằng Inline-style -->
+    <h1 style="color: blue;">Tiêu đề sử dụng Inline-style</h1>
+    <p style="color: red;">Đoạn văn này được đổi màu bằng thuộc tính inline-style.</p>
 
-    <main>
-        <section class="profile">
-            <!-- Bạn có thể dùng ảnh avatar.jpg trong máy hoặc link placeholder này -->
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&auto=format&fit=crop&q=80" alt="Ảnh đại diện" class="avatar">
-            <p>Xin chào! Tôi là <strong>Nông Quang Tiệp</strong>, một lập trình viên yêu thích công nghệ và phát triển web.</p>
-        </section>
+    <hr>
 
-        <section class="hobbies">
-            <h2>Sở thích</h2>
-            <ul>
-                <li>Đọc sách công nghệ</li>
-                <li>Chơi thể thao</li>
-                <li>Lập trình Web & Hệ thống</li>
-                <li>Du lịch trải nghiệm</li>
-            </ul>
-        </section>
+    <!-- PHẦN 2: Thay đổi màu sắc bằng Internal-style -->
+    <h1 class="internal-heading">Tiêu đề sử dụng Internal-style</h1>
+    <p class="internal-text">Đoạn văn này được đổi màu bằng CSS khai báo trong internal-style.</p>
 
-        <section class="goals">
-            <h2>Mục tiêu học tập</h2>
-            <p>Tôi muốn trở thành một kỹ sư phần mềm chuyên nghiệp, làm chủ Frontend hiện đại và xây dựng các sản phẩm thực tế hữu ích.</p>
-        </section>
-    </main>
+    <hr>
 
-    <footer>
-        <h2>Thông tin liên hệ</h2>
-        <table>
-            <tr>
-                <th>Email</th>
-                <td>quangtiep@example.com</td>
-            </tr>
-            <tr>
-                <th>Facebook</th>
-                <td><a href="https://facebook.com" target="_blank">facebook.com/nongquangtiep</a></td>
-            </tr>
-            <tr>
-                <th>GitHub</th>
-                <td><a href="https://github.com/nongquangtiep" target="_blank">github.com/nongquangtiep</a></td>
-            </tr>
-        </table>
-    </footer>
+    <!-- PHẦN 3: Thay đổi màu sắc bằng External-style -->
+    <h1 class="external-heading">Tiêu đề sử dụng External-style</h1>
+    <p class="external-text">Đoạn văn này được đổi màu bằng file style.css bên ngoài.</p>
 
 </body>
 </html>
