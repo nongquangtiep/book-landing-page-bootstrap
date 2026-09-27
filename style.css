@@ -6,48 +6,90 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8fafc;
+    background-color: #f1f5f9;
     padding: 30px;
-    color: #1e293b;
+    color: #334155;
 }
 
 .container {
     max-width: 700px;
     margin: 0 auto;
-    background: #ffffff;
-    padding: 24px;
+    background-color: #ffffff;
+    padding: 28px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 h1 {
-    text-align: center;
+    font-size: 22px;
     color: #1e3a8a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
     margin-bottom: 20px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+h2 {
+    font-size: 16px;
+    color: #0f766e;
+    margin: 18px 0 10px 0;
 }
 
-th, td {
-    border: 1px solid #cbd5e1;
-    padding: 12px;
-    text-align: center;
-    font-size: 14px;
+/* 1. list-style-type */
+ul.circle-list {
+    list-style-type: circle;
+    padding-left: 30px;
 }
 
-th {
-    background-color: #2563eb;
-    color: #ffffff;
+ul.square-list {
+    list-style-type: square;
+    padding-left: 30px;
 }
 
-tbody tr:nth-child(even) {
+ol.roman-list {
+    list-style-type: upper-roman;
+    padding-left: 30px;
+}
+
+ol.alpha-list {
+    list-style-type: lower-alpha;
+    padding-left: 30px;
+}
+
+/* 2. list-style-position */
+ul.pos-inside {
+    list-style-position: inside;
     background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-.highlight {
-    background-color: #fef3c7;
+ul.pos-outside {
+    list-style-position: outside;
+    background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 10px 10px 10px 30px;
+}
+
+/* 3. list-style viết tắt & màu sắc */
+/* Cú pháp rút gọn: list-style: [type] [position] [image]; */
+ol.custom-styled-list {
+    list-style: decimal inside;
+    background-color: #e0f2fe;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+/* Định dạng từng thẻ li bên trong */
+ol.custom-styled-list li {
+    background-color: #ffffff;
+    color: #0369a1;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-left: 4px solid #0284c7;
     font-weight: 500;
+}
+
+ol.custom-styled-list li:last-child {
+    margin-bottom: 0;
 }

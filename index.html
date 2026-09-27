@@ -2,98 +2,55 @@
 <html lang="vi">
 <head>
     <meta charset="utf-8">
-    <title>Lịch họp công ty</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f8fafc;
-            padding: 30px;
-        }
-
-        .container {
-            max-width: 650px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 24px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        h1 {
-            text-align: center;
-            color: #1e3a8a;
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid #cbd5e1;
-            padding: 12px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #2563eb;
-            color: #ffffff;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-
-        .highlight {
-            background-color: #fef3c7;
-            font-weight: 500;
-        }
-    </style>
+    <title>Thực hành Danh sách trong CSS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Lịch họp công ty</h1>
+        <h1>Thực Hành: Định Kiểu Danh Sách Bằng CSS</h1>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Ngày</th>
-                    <th>Giờ</th>
-                    <th>Nội dung cuộc họp</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Thứ Hai có 2 cuộc họp: dùng rowspan="2" cho cột Ngày -->
-                <tr>
-                    <td rowspan="2"><b>Thứ Hai (28/09)</b></td>
-                    <td>08:30 - 09:30</td>
-                    <td>Họp giao ban đầu tuần phòng Kỹ thuật</td>
-                </tr>
-                <tr>
-                    <td>14:00 - 15:30</td>
-                    <td>Đánh giá tiến độ dự án Website</td>
-                </tr>
+        <!-- 1. Kiểu đánh dấu (list-style-type) cho danh sách không có thứ tự <ul> -->
+        <h2>1. Các kiểu cho danh sách không thứ tự (ul)</h2>
+        <ul class="circle-list">
+            <li>Mục tròn rỗng (circle)</li>
+            <li>Mục tròn rỗng thứ hai</li>
+        </ul>
 
-                <!-- Thứ Ba có sự kiện kéo dài cả buổi: dùng colspan="2" gộp Giờ và Nội dung -->
-                <tr>
-                    <td><b>Thứ Ba (29/09)</b></td>
-                    <td colspan="2" class="highlight">Workshop đào tạo nội bộ (Kéo dài cả ngày: 08:30 - 17:00)</td>
-                </tr>
+        <ul class="square-list">
+            <li>Mục vuông đặc (square)</li>
+            <li>Mục vuông đặc thứ hai</li>
+        </ul>
 
-                <!-- Thứ Tư có 2 cuộc họp: dùng rowspan="2" -->
-                <tr>
-                    <td rowspan="2"><b>Thứ Tư (30/09)</b></td>
-                    <td>09:00 - 10:30</td>
-                    <td>Phỏng vấn ứng viên Frontend</td>
-                </tr>
-                <tr>
-                    <td>15:00 - 16:30</td>
-                    <td>Báo cáo tiến độ Sprint với khách hàng</td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- 2. Kiểu đánh dấu (list-style-type) cho danh sách có thứ tự <ol> -->
+        <h2>2. Các kiểu cho danh sách có thứ tự (ol)</h2>
+        <ol class="roman-list">
+            <li>Chữ số La Mã viết hoa (upper-roman)</li>
+            <li>Chữ số La Mã tiếp theo</li>
+        </ol>
+
+        <ol class="alpha-list">
+            <li>Chữ cái viết thường (lower-alpha)</li>
+            <li>Chữ cái tiếp theo</li>
+        </ol>
+
+        <!-- 3. Vị trí đánh dấu (list-style-position) -->
+        <h2>3. Vị trí đánh dấu: inside vs outside</h2>
+        <ul class="pos-inside">
+            <li><b>Inside:</b> Dấu đầu dòng nằm bên trong khối nội dung, dòng thứ hai sẽ thụt lề thẳng hàng với dấu chấm tròn.</li>
+        </ul>
+
+        <ul class="pos-outside">
+            <li><b>Outside (Mặc định):</b> Dấu đầu dòng nằm thò ra ngoài lề của khối nội dung văn bản.</li>
+        </ul>
+
+        <!-- 4. Dùng thuộc tính viết tắt (shorthand: list-style) và định dạng màu sắc -->
+        <h2>4. Thuộc tính viết tắt (list-style) & Tô màu danh sách</h2>
+        <ol class="custom-styled-list">
+            <li>Học thẻ HTML cơ bản</li>
+            <li>Tạo Form và Table</li>
+            <li>Luyện tập CSS Box Model và Danh sách</li>
+        </ol>
     </div>
 
 </body>
