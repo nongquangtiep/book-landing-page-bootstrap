@@ -3,69 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành Tạo bố cục cơ bản</title>
+    <title>Bố cục trang web với HTML5 và CSS</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="main">
-        <!-- 1. Vùng Header: Logo và Banner -->
-        <div id="head">
-            <h1>Header: Logo & Banner</h1>
-        </div>
+    <div class="container">
+        <!-- 1. Đầu trang: Logo và Tiêu đề -->
+        <header>
+            <h1>Trang Tin Công Nghệ & Lập Trình</h1>
+            <p>Cập nhật kiến thức thiết kế giao diện web chuẩn HTML5 & CSS</p>
+        </header>
 
-        <!-- 2. Vùng Menu liên kết đầu trang -->
-        <div id="head-link">
+        <!-- 2. Thanh điều hướng ngang -->
+        <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Students</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">HTML5 / CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">Dự án</a></li>
+                <li><a href="#">Liên hệ</a></li>
             </ul>
-        </div>
+        </nav>
 
-        <!-- Khung chứa 3 cột giữa -->
-        <div class="middle-wrapper">
-            <!-- 3. Cột bên trái -->
-            <div id="left">
-                <h3>Menu Trái</h3>
-                <ul>
-                    <li><a href="#">Khóa học HTML</a></li>
-                    <li><a href="#">Khóa học CSS</a></li>
-                    <li><a href="#">Khóa học JavaScript</a></li>
-                    <li><a href="#">Tài liệu học tập</a></li>
-                </ul>
-            </div>
+        <!-- Khung bao bọc phần thân chính -->
+        <div class="content-wrapper">
+            <!-- 3. Khu vực bài viết chính -->
+            <section class="main-content">
+                <article>
+                    <h2>Lợi ích của thẻ ngữ nghĩa (Semantic Tags) trong HTML5</h2>
+                    <p class="post-meta">Đăng ngày 27/09/2026 bởi Ban Biên Tập</p>
+                    <p>Việc sử dụng các thẻ như <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> giúp mã nguồn rõ ràng, tăng khả năng tiếp cận (Accessibility) và tối ưu hóa SEO cho công cụ tìm kiếm.</p>
+                </article>
 
-            <!-- 4. Vùng nội dung chính -->
-            <div id="content">
-                <h2>Nội dung chính (Content)</h2>
-                <div class="content-block">
-                    <h4>Tin nổi bật (Hot News)</h4>
-                    <p>Khóa học Lập trình Web Frontend hiện đại tại CodeGym với chuẩn kiến thức thực chiến.</p>
+                <article>
+                    <h2>Làm chủ Box Model và kỹ thuật dựng Layout</h2>
+                    <p class="post-meta">Đăng ngày 26/09/2026 bởi Ban Biên Tập</p>
+                    <p>Box Model là nền tảng cốt lõi trong CSS. Hiểu rõ margin, border, padding cùng box-sizing giúp lập trình viên kiểm soát chính xác từng pixel trên giao diện.</p>
+                </article>
+            </section>
+
+            <!-- 4. Thanh bên (Sidebar) -->
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3>Chuyên mục</h3>
+                    <ul>
+                        <li><a href="#">Frontend căn bản</a></li>
+                        <li><a href="#">Tối ưu hóa UI/UX</a></li>
+                        <li><a href="#">Git & GitHub thực chiến</a></li>
+                    </ul>
                 </div>
-                <div class="content-block">
-                    <h4>Bài viết mới nhất</h4>
-                    <p>Mô hình hộp Box Model và các kỹ thuật căn chỉnh bố cục với Float, Clear và Flexbox.</p>
+
+                <div class="widget">
+                    <h3>Thông báo</h3>
+                    <p>Khóa học Web Frontend đang mở đăng ký các bài tập thực hành mới nhất.</p>
                 </div>
-            </div>
-
-            <!-- 5. Cột bên phải -->
-            <div id="right">
-                <h3>Cột Phải</h3>
-                <div class="widget">Lịch biểu</div>
-                <div class="widget">Biểu đồ</div>
-                <div class="widget">Bản đồ</div>
-            </div>
+            </aside>
         </div>
 
-        <!-- 6. Vùng chân trang -->
-        <div id="footer">
-            <p>© 2026 CodeGym Vietnam - Tất cả các quyền được bảo lưu.</p>
-            <p>Liên hệ: info@codegym.vn | Điều khoản dịch vụ</p>
-        </div>
+        <!-- 5. Chân trang -->
+        <footer>
+            <p>© 2026 Xây dựng bố cục Web với HTML5 Semantic Elements.</p>
+            <p>Thiết kế bởi CodeGym Developer</p>
+        </footer>
     </div>
 
 </body>
