@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành Box Model 3</title>
-    <!-- Nhúng file CSS ngoài -->
+    <title>Bài tập Box Model 1</title>
+    <!-- Liên kết file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="demo">
-        <div class="d1"></div>
-        <div class="d2"></div>
+    <div class="container">
+        <!-- Thẻ 1: content-box, màu xanh lá -->
+        <div class="card">
+            <h3>Thẻ 1 (content-box)</h3>
+            <p>Kích thước hộp = width + padding + border.</p>
+        </div>
+
+        <!-- Thẻ 2: border-box, màu vàng -->
+        <div class="card">
+            <h3>Thẻ 2 (border-box)</h3>
+            <p>Tổng kích thước bao gồm cả padding và border.</p>
+        </div>
+
+        <!-- Thẻ 3: border-box, màu đỏ -->
+        <div class="card">
+            <h3>Thẻ 3 (border-box)</h3>
+            <p>Tổng kích thước cố định đúng bằng width và height.</p>
+        </div>
     </div>
 
 </body>
