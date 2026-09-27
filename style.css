@@ -1,76 +1,21 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box; /* Chuẩn tính toán mặc định của Box Model */
 }
 
-/* 1. Thiết lập màu nền (background-color) cho trang web */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f1f5f9; /* Màu nền xám xanh sáng cho toàn trang */
-    color: #1e293b;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #f8fafc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-header {
-    text-align: center;
-    max-width: 600px;
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 26px;
-    color: #0f172a;
-    margin-bottom: 12px;
-}
-
-.intro-desc {
-    color: #475569;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-/* 2. Thêm ảnh nền (background-image) và 3. Căn giữa nội dung trong khối div */
-.featured-box {
-    max-width: 700px;
-    width: 100%;
-    min-height: 280px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-
-    /* Thiết lập ảnh nền chất lượng cao từ Unsplash */
-    background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&auto=format&fit=crop&q=80');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    /* Căn giữa nội dung bên trong khối div */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Lớp phủ mờ giúp chữ hiển thị rõ ràng trên nền ảnh */
-.box-content {
-    background-color: rgba(15, 23, 42, 0.75); /* Lớp nền đen mờ */
+.box-demo {
+    width: 200px;
+    padding: 35px;
+    border: 20px dashed indianred;
+    margin: 25px;
+    background-color: lightseagreen;
     color: #ffffff;
-    padding: 24px 30px;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 80%;
-}
-
-.box-content h2 {
-    font-size: 20px;
-    color: #38bdf8;
-    margin-bottom: 10px;
-}
-
-.box-content p {
-    font-size: 14px;
-    line-height: 1.6;
+    font-weight: bold;
 }
