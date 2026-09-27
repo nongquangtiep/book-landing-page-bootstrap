@@ -6,90 +6,65 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f1f5f9;
+    background-color: #f8fafc;
     padding: 30px;
     color: #334155;
 }
 
 .container {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     background-color: #ffffff;
-    padding: 28px;
+    padding: 24px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-h1 {
-    font-size: 22px;
-    color: #1e3a8a;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 h2 {
-    font-size: 16px;
-    color: #0f766e;
-    margin: 18px 0 10px 0;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* 1. list-style-type */
-ul.circle-list {
-    list-style-type: circle;
-    padding-left: 30px;
+/* 1. Chiều rộng bảng & Gộp viền đơn */
+#custom-table {
+    width: 100%;                  /* Bảng chiếm 100% chiều rộng khung chứa */
+    border-collapse: collapse;    /* Gộp viền đôi thành viền đơn */
 }
 
-ul.square-list {
-    list-style-type: square;
-    padding-left: 30px;
+/* 2. Đường viền và đệm lót (Padding) */
+#custom-table th, 
+#custom-table td {
+    border: 1px solid #cbd5e1;    /* Đường viền cho th và td */
+    padding: 12px 15px;           /* Khoảng cách giữa viền và chữ */
+    vertical-align: middle;       /* Căn lề theo chiều dọc ở giữa */
 }
 
-ol.roman-list {
-    list-style-type: upper-roman;
-    padding-left: 30px;
+/* 3. Chiều cao & Căn chỉnh ngang cho tiêu đề (th) */
+#custom-table th {
+    height: 50px;                 /* Đặt chiều cao hàng tiêu đề */
+    text-align: left;             /* Căn lề trái cho tiêu đề thay vì căn giữa mặc định */
+    background-color: #2563eb;    /* Màu nền xanh cho thẻ th */
+    color: #ffffff;               /* Màu chữ trắng */
+    font-size: 15px;
 }
 
-ol.alpha-list {
-    list-style-type: lower-alpha;
-    padding-left: 30px;
+/* 4. Căn chỉnh ô dữ liệu (td) */
+#custom-table td:first-child {
+    text-align: center;           /* Riêng cột Mã NV căn giữa */
+    width: 90px;
 }
 
-/* 2. list-style-position */
-ul.pos-inside {
-    list-style-position: inside;
-    background-color: #f8fafc;
-    border: 1px dashed #cbd5e1;
-    padding: 10px;
-    margin-bottom: 10px;
+#custom-table td:last-child {
+    text-align: right;            /* Cột Lương căn lề phải */
+    font-weight: bold;
 }
 
-ul.pos-outside {
-    list-style-position: outside;
-    background-color: #f8fafc;
-    border: 1px dashed #cbd5e1;
-    padding: 10px 10px 10px 30px;
+/* 5. Màu sắc xen kẽ (Zebra Stripes) & Hiệu ứng hover */
+#custom-table tbody tr:nth-child(even) {
+    background-color: #f1f5f9;    /* Dòng chẵn có nền xám nhạt */
 }
 
-/* 3. list-style viết tắt & màu sắc */
-/* Cú pháp rút gọn: list-style: [type] [position] [image]; */
-ol.custom-styled-list {
-    list-style: decimal inside;
-    background-color: #e0f2fe;
-    padding: 15px;
-    border-radius: 6px;
-}
-
-/* Định dạng từng thẻ li bên trong */
-ol.custom-styled-list li {
-    background-color: #ffffff;
-    color: #0369a1;
-    padding: 8px 12px;
-    margin-bottom: 6px;
-    border-left: 4px solid #0284c7;
-    font-weight: 500;
-}
-
-ol.custom-styled-list li:last-child {
-    margin-bottom: 0;
+#custom-table tbody tr:hover {
+    background-color: #e2e8f0;    /* Đổi màu khi rê chuột vào hàng */
 }

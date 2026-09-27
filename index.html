@@ -2,55 +2,51 @@
 <html lang="vi">
 <head>
     <meta charset="utf-8">
-    <title>Thực hành Danh sách trong CSS</title>
+    <title>Thực hành Bảng trong CSS</title>
+    <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Thực Hành: Định Kiểu Danh Sách Bằng CSS</h1>
+        <h2>Bảng Quản Lý Nhân Viên</h2>
 
-        <!-- 1. Kiểu đánh dấu (list-style-type) cho danh sách không có thứ tự <ul> -->
-        <h2>1. Các kiểu cho danh sách không thứ tự (ul)</h2>
-        <ul class="circle-list">
-            <li>Mục tròn rỗng (circle)</li>
-            <li>Mục tròn rỗng thứ hai</li>
-        </ul>
-
-        <ul class="square-list">
-            <li>Mục vuông đặc (square)</li>
-            <li>Mục vuông đặc thứ hai</li>
-        </ul>
-
-        <!-- 2. Kiểu đánh dấu (list-style-type) cho danh sách có thứ tự <ol> -->
-        <h2>2. Các kiểu cho danh sách có thứ tự (ol)</h2>
-        <ol class="roman-list">
-            <li>Chữ số La Mã viết hoa (upper-roman)</li>
-            <li>Chữ số La Mã tiếp theo</li>
-        </ol>
-
-        <ol class="alpha-list">
-            <li>Chữ cái viết thường (lower-alpha)</li>
-            <li>Chữ cái tiếp theo</li>
-        </ol>
-
-        <!-- 3. Vị trí đánh dấu (list-style-position) -->
-        <h2>3. Vị trí đánh dấu: inside vs outside</h2>
-        <ul class="pos-inside">
-            <li><b>Inside:</b> Dấu đầu dòng nằm bên trong khối nội dung, dòng thứ hai sẽ thụt lề thẳng hàng với dấu chấm tròn.</li>
-        </ul>
-
-        <ul class="pos-outside">
-            <li><b>Outside (Mặc định):</b> Dấu đầu dòng nằm thò ra ngoài lề của khối nội dung văn bản.</li>
-        </ul>
-
-        <!-- 4. Dùng thuộc tính viết tắt (shorthand: list-style) và định dạng màu sắc -->
-        <h2>4. Thuộc tính viết tắt (list-style) & Tô màu danh sách</h2>
-        <ol class="custom-styled-list">
-            <li>Học thẻ HTML cơ bản</li>
-            <li>Tạo Form và Table</li>
-            <li>Luyện tập CSS Box Model và Danh sách</li>
-        </ol>
+        <table id="custom-table">
+            <thead>
+                <tr>
+                    <th>Mã NV</th>
+                    <th>Họ và Tên</th>
+                    <th>Vị Trí</th>
+                    <th>Lương (VNĐ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NV01</td>
+                    <td>Nguyễn Văn An</td>
+                    <td>Lập trình viên Frontend</td>
+                    <td>15,000,000</td>
+                </tr>
+                <tr>
+                    <td>NV02</td>
+                    <td>Trần Thị Bích</td>
+                    <td>Chuyên viên Thiết kế UI/UX</td>
+                    <td>14,500,000</td>
+                </tr>
+                <tr>
+                    <td>NV03</td>
+                    <td>Lê Hoàng Cường</td>
+                    <td>Quản lý Dự án</td>
+                    <td>22,000,000</td>
+                </tr>
+                <tr>
+                    <td>NV04</td>
+                    <td>Phạm Minh Đức</td>
+                    <td>Kỹ sư DevOps</td>
+                    <td>18,500,000</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
