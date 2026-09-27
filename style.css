@@ -1,133 +1,87 @@
-/* Reset lề và viền theo đề bài */
-html, body, h1, h2, h3, h4, ul, ol, li, p, a {
-  padding: 0;
-  border: 0;
-  margin: 0;
-  box-sizing: border-box;
+/* Định dạng chung và cuộn mượt mà */
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f6f8;
-  color: #333333;
-  line-height: 1.5;
-  padding: 30px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Khung bọc trung tâm */
-.container {
-  max-width: 650px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 30px 35px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+/* Thanh điều hướng Sticky */
+.sticky-menu {
+    position: sticky;
+    top: 0;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Định dạng tiêu đề chính h1 */
-h1 {
-  color: #111827;
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid #e5e7eb;
+.sticky-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* Menu thanh điều hướng (Horizontal Navigation) */
-.nav {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 25px;
-  padding: 10px 0;
-  background-color: #f9fafb;
-  border-radius: 6px;
+.sticky-menu ul li {
+    margin: 0 15px;
 }
 
-.nav li a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #8b0000;
-  padding: 6px 14px;
-  border-radius: 4px;
-  transition: all 0.2s ease;
+.sticky-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 8px 16px;
+    display: block;
+    transition: background-color 0.2s ease, border-radius 0.2s ease;
 }
 
-.nav li a:hover {
-  background-color: #8b0000;
-  color: #ffffff;
+.sticky-menu ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
 }
 
-/* Tiêu đề cấp 2 h2 */
-h2 {
-  color: #1f2937;
-  font-size: 20px;
-  margin: 22px 0 12px 0;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #e5e7eb;
+/* Định dạng các khối nội dung với chiều cao đủ lớn để cuộn trang */
+section {
+    padding: 100px 30px;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-/* Khối nội dung con */
-.section-block {
-  margin-bottom: 16px;
-  padding-left: 10px;
+section h1, 
+section h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
 }
 
-/* Tiêu đề cấp 3 h3 */
-h3 {
-  color: #4b5563;
-  font-size: 16px;
-  margin-bottom: 6px;
+section p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-/* Đoạn văn p */
-p {
-  color: #4b5563;
-  font-size: 14px;
-  margin-bottom: 6px;
+#home { 
+    background-color: #f4f4f4; 
+    color: #222222;
 }
 
-/* Danh sách thành viên */
-.list {
-  list-style-type: square;
-  padding-left: 24px;
-  margin-bottom: 10px;
+#about { 
+    background-color: #dddddd; 
+    color: #222222;
 }
 
-.list li {
-  font-size: 14px;
-  color: #4b5563;
-  margin-bottom: 4px;
+#services { 
+    background-color: #bbbbbb; 
+    color: #111111;
 }
 
-/* Danh sách lịch lưu diễn (Tour Dates) */
-.tour-list {
-  list-style: none;
-  margin-top: 10px;
-}
-
-.tour-list li {
-  padding: 10px 14px;
-  margin-bottom: 8px;
-  background-color: #f9fafb;
-  border-left: 4px solid #8b0000;
-  border-radius: 0 4px 4px 0;
-}
-
-.tour-time {
-  font-weight: bold;
-  color: #111827;
-}
-
-/* Đường liên kết chung */
-a {
-  color: #8b0000;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+#contact { 
+    background-color: #999999; 
+    color: #ffffff;
 }
