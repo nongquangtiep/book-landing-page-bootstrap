@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục với Float và Overflow</title>
+    <title>Responsive Navbar</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
+    <!-- Nhúng file JS ngoài với thuộc tính defer -->
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <div class="wrapper">
-        <h1>Bố cục trang với float và overflow</h1>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyWebsite</div>
+            
+            <ul class="nav-links">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
 
-        <!-- Khối chứa 2 cột sử dụng Float -->
-        <div class="container">
-            <div class="left-column">
-                <h3>Cột Trái (Float Left)</h3>
-                <p>Nội dung bên trái hiển thị thông tin bài viết chính hoặc khu vực giới thiệu tổng quan.</p>
-            </div>
-            <div class="right-column">
-                <h3>Cột Phải (Float Right)</h3>
-                <p>Nội dung bên phải đóng vai trò là sidebar hỗ trợ hiển thị các tiện ích bổ sung.</p>
-            </div>
-        </div>
+            <div class="menu-icon">☰</div>
+        </nav>
+    </header>
 
-        <!-- Khối chứa nội dung dài có thanh cuộn overflow -->
-        <div class="overflow-box">
-            <h4>Khối kiểm tra Overflow:</h4>
-            Đây là nội dung rất dài mà chúng ta kiểm tra overflow. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-    </div>
+    <main class="content">
+        <h1>Thực hành Responsive Navbar</h1>
+        <p>Thu nhỏ cửa sổ trình duyệt (hoặc bật F12 chuyển sang chế độ điện thoại) để kiểm tra nút menu ☰.</p>
+    </main>
 
 </body>
 </html>

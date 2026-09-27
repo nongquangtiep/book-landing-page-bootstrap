@@ -1,76 +1,102 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Giữ tổng kích thước cột đúng tỷ lệ % kèm padding */
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f1f5f9;
+    background-color: #f8fafc;
     color: #1e293b;
-    padding: 30px 15px;
+}
+
+/* Thanh điều hướng hiển thị Desktop */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    padding: 15px 25px;
+    color: #ffffff;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555555;
+}
+
+/* Biểu tượng nút hamburger ẩn trên màn hình lớn */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Khu vực nội dung kiểm tra */
+.content {
+    padding: 50px 20px;
+    text-align: center;
     line-height: 1.6;
 }
 
-.wrapper {
-    max-width: 850px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
+/* ✅ Responsive Media Query cho Màn hình Mobile (<= 768px) */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Hiện biểu tượng ☰ */
+    }
 
-h1 {
-    font-size: 24px;
-    text-align: center;
-    color: #0f172a;
-    margin-bottom: 25px;
-}
+    .nav-links {
+        display: none; /* Mặc định ẩn danh sách menu */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Nằm ngay dưới thanh navbar */
+        left: 0;
+        width: 100%;
+        background-color: #333333;
+        padding: 10px 0;
+        border-top: 1px solid #444444;
+    }
 
-/* Khung bọc 2 cột float */
-.container {
-    width: 100%;
-    overflow: hidden; /* Clearfix tự động dọn dòng trôi của các phần tử con */
-    margin-bottom: 25px;
-}
+    .nav-links li {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
 
-/* Cột trái chiếm 50% */
-.left-column {
-    width: 50%;
-    float: left;
-    background-color: #e2e8f0;
-    padding: 20px;
-    border-radius: 6px;
-}
+    .nav-links a {
+        display: block;
+        padding: 12px 0;
+    }
 
-/* Cột phải chiếm 48% (chừa 2% khoảng trống cách mép) */
-.right-column {
-    width: 48%;
-    float: right;
-    background-color: #dcfce7;
-    padding: 20px;
-    border-radius: 6px;
-}
-
-.left-column h3,
-.right-column h3 {
-    margin-bottom: 8px;
-    font-size: 18px;
-}
-
-/* Khối nội dung dài kiểm tra thanh cuộn */
-.overflow-box {
-    width: 100%;
-    height: 120px;
-    background-color: #fee2e2;
-    border: 1px solid #fca5a5;
-    color: #991b1b;
-    padding: 15px;
-    border-radius: 6px;
-    overflow: auto; /* Tự động xuất hiện thanh cuộn khi nội dung tràn qua chiều cao 120px */
-}
-
-.overflow-box h4 {
-    margin-bottom: 6px;
+    /* Class active được thêm bằng JavaScript khi click nút menu */
+    .nav-links.active {
+        display: flex;
+    }
 }
