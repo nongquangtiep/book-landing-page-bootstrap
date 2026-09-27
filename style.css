@@ -1,21 +1,27 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: content-box; /* Chuẩn tính toán mặc định của Box Model */
+    box-sizing: content-box;
 }
 
 body {
     background-color: #f8fafc;
-    padding: 20px;
+    padding-top: 50px;
     font-family: Arial, sans-serif;
 }
 
-.box-demo {
-    width: 200px;
+/* Khối bên ngoài: Tạo hình tròn bằng border-radius: 50% */
+.outer-box {
+    margin: auto;
     padding: 35px;
-    border: 20px dashed indianred;
-    margin: 25px;
-    background-color: lightseagreen;
-    color: #ffffff;
-    font-weight: bold;
+    width: 80px;
+    box-shadow: inset 0 0 22px indianred;
+    border-radius: 50%;
+}
+
+/* Khối con bên trong: Tạo hình trụ / oval đứng */
+.outer-box > .inner-box {
+    padding: 0 0px 100px 0px;
+    border-radius: 3%;
+    box-shadow: inset 0 0 22px seagreen;
 }
