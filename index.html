@@ -3,32 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục bằng Float</title>
+    <title>Thực hành Tạo bố cục cơ bản</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="wrapper">
-        <header>
-            <h1>Thực Hành: Bố Cục Hai Cột Với Float & Clear</h1>
-        </header>
+    <div id="main">
+        <!-- 1. Vùng Header: Logo và Banner -->
+        <div id="head">
+            <h1>Header: Logo & Banner</h1>
+        </div>
 
-        <main class="container">
-            <section class="left-column">
-                <h2>Cột bên trái (Nội dung chính - 60%)</h2>
-                <p>Khối này được áp dụng thuộc tính <code>float: left</code>, chiếm 60% chiều rộng khung chứa để hiển thị bài viết, hình ảnh và nội dung trung tâm của trang web.</p>
-            </section>
+        <!-- 2. Vùng Menu liên kết đầu trang -->
+        <div id="head-link">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
 
-            <aside class="right-column">
-                <h2>Cột bên phải (Sidebar - 38%)</h2>
-                <p>Khối này sử dụng <code>float: right</code>, chiếm 38% chiều rộng, dùng làm thanh bên chứa danh mục, liên kết hữu ích hoặc thông tin phụ trợ.</p>
-            </aside>
-        </main>
+        <!-- Khung chứa 3 cột giữa -->
+        <div class="middle-wrapper">
+            <!-- 3. Cột bên trái -->
+            <div id="left">
+                <h3>Menu Trái</h3>
+                <ul>
+                    <li><a href="#">Khóa học HTML</a></li>
+                    <li><a href="#">Khóa học CSS</a></li>
+                    <li><a href="#">Khóa học JavaScript</a></li>
+                    <li><a href="#">Tài liệu học tập</a></li>
+                </ul>
+            </div>
 
-        <footer>
-            <p>© 2026 - Thiết kế bố cục Web với Float và Clear</p>
-        </footer>
+            <!-- 4. Vùng nội dung chính -->
+            <div id="content">
+                <h2>Nội dung chính (Content)</h2>
+                <div class="content-block">
+                    <h4>Tin nổi bật (Hot News)</h4>
+                    <p>Khóa học Lập trình Web Frontend hiện đại tại CodeGym với chuẩn kiến thức thực chiến.</p>
+                </div>
+                <div class="content-block">
+                    <h4>Bài viết mới nhất</h4>
+                    <p>Mô hình hộp Box Model và các kỹ thuật căn chỉnh bố cục với Float, Clear và Flexbox.</p>
+                </div>
+            </div>
+
+            <!-- 5. Cột bên phải -->
+            <div id="right">
+                <h3>Cột Phải</h3>
+                <div class="widget">Lịch biểu</div>
+                <div class="widget">Biểu đồ</div>
+                <div class="widget">Bản đồ</div>
+            </div>
+        </div>
+
+        <!-- 6. Vùng chân trang -->
+        <div id="footer">
+            <p>© 2026 CodeGym Vietnam - Tất cả các quyền được bảo lưu.</p>
+            <p>Liên hệ: info@codegym.vn | Điều khoản dịch vụ</p>
+        </div>
     </div>
 
 </body>

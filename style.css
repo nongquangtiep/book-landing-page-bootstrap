@@ -1,80 +1,195 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Bắt buộc để padding không làm nở rộng % kích thước */
+    box-sizing: border-box;
 }
 
+/* 1. Body & Khung bọc #main cố định độ rộng căn giữa */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f1f5f9;
-    color: #1e293b;
-    padding: 30px 15px;
-    line-height: 1.6;
+    color: #333333;
+    padding: 20px 0;
 }
 
-.wrapper {
-    max-width: 960px;
+#main {
+    width: 980px;
     margin: 0 auto;
     background-color: #ffffff;
-    border-radius: 8px;
+    border: 1px solid #cbd5e1;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
 }
 
-header {
+/* 2. Header (#head) */
+#head {
+    height: 110px;
     background-color: #1e3a8a;
     color: #ffffff;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #0f172a;
 }
 
-header h1 {
-    font-size: 22px;
+#head h1 {
+    font-size: 24px;
 }
 
-/* Khung bọc hai cột */
-.container {
+/* 3. Vùng liên kết (#head-link) */
+#head-link {
+    background-color: #2563eb;
+    padding: 10px 20px;
+}
+
+#head-link ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+#head-link ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#head-link ul li a:hover {
+    background-color: #1d4ed8;
+}
+
+/* Khung bọc chứa 3 cột và kỹ thuật Clearfix */
+.middle-wrapper {
     width: 100%;
-    padding: 20px;
+    padding: 15px;
 }
 
-/* Cột bên trái: Chiếm 60% chiều rộng và đẩy sang trái */
-.left-column {
-    width: 60%;
-    float: left;
-    background-color: #e0f2fe;
-    padding: 20px;
-    border-radius: 6px;
-    border: 1px solid #bae6fd;
-}
-
-/* Cột bên phải: Chiếm 38% chiều rộng và đẩy sang phải (còn dư 2% khoảng trống tự nhiên) */
-.right-column {
-    width: 38%;
-    float: right;
-    background-color: #dcfce7;
-    padding: 20px;
-    border-radius: 6px;
-    border: 1px solid #bbf7d0;
-}
-
-.left-column h2,
-.right-column h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-/* Kỹ thuật Clearfix chuẩn: Ngăn chặn hiện tượng cha bị co rút chiều cao (Collapse height) */
-.container::after {
+.middle-wrapper::after {
     content: "";
     display: block;
     clear: both;
 }
 
-footer {
+/* 4. Cột bên trái (#left) */
+#left {
+    width: 200px;
+    min-height: 400px;
+    float: left;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#left h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #1e3a8a;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 6px;
+}
+
+#left ul {
+    list-style: none;
+}
+
+#left ul li {
+    margin-bottom: 8px;
+}
+
+#left ul li a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#left ul li a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* 5. Vùng nội dung chính (#content) */
+#content {
+    width: 520px;
+    min-height: 400px;
+    float: left;
+    margin: 0 15px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 15px 20px;
+    border-radius: 4px;
+}
+
+#content h2 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 8px;
+}
+
+.content-block {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.content-block h4 {
+    color: #2563eb;
+    margin-bottom: 6px;
+}
+
+.content-block p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+/* 6. Cột bên phải (#right) */
+#right {
+    width: 200px;
+    min-height: 400px;
+    float: left;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#right h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #1e3a8a;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 6px;
+}
+
+.widget {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 18px 10px;
+    margin-bottom: 12px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px dashed #38bdf8;
+}
+
+/* 7. Chân trang (#footer) */
+#footer {
+    clear: both; /* Đảm bảo chân trang luôn nằm dưới các khối float */
     background-color: #334155;
     color: #ffffff;
     text-align: center;
-    padding: 15px;
-    font-size: 14px;
+    padding: 20px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+#footer p {
+    color: #cbd5e1;
 }
