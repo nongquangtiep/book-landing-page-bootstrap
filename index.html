@@ -3,71 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục trang web với HTML5 và CSS</title>
+    <title>Bố cục với display</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- 1. Đầu trang: Logo và Tiêu đề -->
-        <header>
-            <h1>Trang Tin Công Nghệ & Lập Trình</h1>
-            <p>Cập nhật kiến thức thiết kế giao diện web chuẩn HTML5 & CSS</p>
-        </header>
+    <header>
+        <h1>Bố cục trang web với display</h1>
+    </header>
 
-        <!-- 2. Thanh điều hướng ngang -->
-        <nav>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">HTML5 / CSS3</a></li>
-                <li><a href="#">JavaScript</a></li>
-                <li><a href="#">Dự án</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Dịch vụ</a>
+        <a href="#">Liên hệ</a>
+    </nav>
 
-        <!-- Khung bao bọc phần thân chính -->
-        <div class="content-wrapper">
-            <!-- 3. Khu vực bài viết chính -->
-            <section class="main-content">
-                <article>
-                    <h2>Lợi ích của thẻ ngữ nghĩa (Semantic Tags) trong HTML5</h2>
-                    <p class="post-meta">Đăng ngày 27/09/2026 bởi Ban Biên Tập</p>
-                    <p>Việc sử dụng các thẻ như <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> giúp mã nguồn rõ ràng, tăng khả năng tiếp cận (Accessibility) và tối ưu hóa SEO cho công cụ tìm kiếm.</p>
-                </article>
-
-                <article>
-                    <h2>Làm chủ Box Model và kỹ thuật dựng Layout</h2>
-                    <p class="post-meta">Đăng ngày 26/09/2026 bởi Ban Biên Tập</p>
-                    <p>Box Model là nền tảng cốt lõi trong CSS. Hiểu rõ margin, border, padding cùng box-sizing giúp lập trình viên kiểm soát chính xác từng pixel trên giao diện.</p>
-                </article>
-            </section>
-
-            <!-- 4. Thanh bên (Sidebar) -->
-            <aside class="sidebar">
-                <div class="widget">
-                    <h3>Chuyên mục</h3>
-                    <ul>
-                        <li><a href="#">Frontend căn bản</a></li>
-                        <li><a href="#">Tối ưu hóa UI/UX</a></li>
-                        <li><a href="#">Git & GitHub thực chiến</a></li>
-                    </ul>
-                </div>
-
-                <div class="widget">
-                    <h3>Thông báo</h3>
-                    <p>Khóa học Web Frontend đang mở đăng ký các bài tập thực hành mới nhất.</p>
-                </div>
-            </aside>
+    <section>
+        <div class="box">
+            <h3>Cột 1</h3>
+            <p>Nội dung giới thiệu dịch vụ và các tính năng chính của trang web.</p>
+        </div><div class="box">
+            <h3>Cột 2</h3>
+            <p>Khối hiển thị thông tin sản phẩm và các giải pháp công nghệ nổi bật.</p>
+        </div><div class="box">
+            <h3>Cột 3</h3>
+            <p>Phần kết nối khách hàng, hỗ trợ tư vấn và tiếp nhận ý kiến đóng góp.</p>
         </div>
+    </section>
 
-        <!-- 5. Chân trang -->
-        <footer>
-            <p>© 2026 Xây dựng bố cục Web với HTML5 Semantic Elements.</p>
-            <p>Thiết kế bởi CodeGym Developer</p>
-        </footer>
-    </div>
+    <footer>
+        <p>Bản quyền &copy; 2026 CodeGym. Tất cả các quyền được bảo lưu.</p>
+    </footer>
 
 </body>
 </html>
