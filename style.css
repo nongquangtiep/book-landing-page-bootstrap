@@ -1,3 +1,4 @@
+/* Định dạng chung */
 * {
     margin: 0;
     padding: 0;
@@ -6,65 +7,96 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8fafc;
-    padding: 30px;
-    color: #334155;
+    background-color: #f5f5f5;
+    color: #333333;
+    text-align: center;
+    line-height: 1.6;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+/* Định dạng tiêu đề header */
+header {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 25px 20px;
+}
+
+header h1 {
+    font-size: 26px;
+}
+
+/* Định dạng ảnh đại diện và phần giới thiệu */
+.profile {
+    padding: 20px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4CAF50;
+    margin: 15px auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Định dạng các khối nội dung */
+section {
+    margin: 20px auto;
+    max-width: 700px;
+    padding: 0 15px;
 }
 
 h2 {
-    color: #1e3a8a;
-    margin-bottom: 20px;
-    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 12px;
 }
 
-/* 1. Chiều rộng bảng & Gộp viền đơn */
-#custom-table {
-    width: 100%;                  /* Bảng chiếm 100% chiều rộng khung chứa */
-    border-collapse: collapse;    /* Gộp viền đôi thành viền đơn */
+/* Định dạng danh sách sở thích */
+ul {
+    list-style-type: square;
+    text-align: left;
+    display: inline-block;
+    padding-left: 20px;
 }
 
-/* 2. Đường viền và đệm lót (Padding) */
-#custom-table th, 
-#custom-table td {
-    border: 1px solid #cbd5e1;    /* Đường viền cho th và td */
-    padding: 12px 15px;           /* Khoảng cách giữa viền và chữ */
-    vertical-align: middle;       /* Căn lề theo chiều dọc ở giữa */
+ul li {
+    padding: 4px 0;
 }
 
-/* 3. Chiều cao & Căn chỉnh ngang cho tiêu đề (th) */
-#custom-table th {
-    height: 50px;                 /* Đặt chiều cao hàng tiêu đề */
-    text-align: left;             /* Căn lề trái cho tiêu đề thay vì căn giữa mặc định */
-    background-color: #2563eb;    /* Màu nền xanh cho thẻ th */
-    color: #ffffff;               /* Màu chữ trắng */
-    font-size: 15px;
+/* Định dạng bảng liên hệ */
+table {
+    margin: 15px auto;
+    border-collapse: collapse;
+    width: 70%;
+    max-width: 500px;
+    background-color: #ffffff;
 }
 
-/* 4. Căn chỉnh ô dữ liệu (td) */
-#custom-table td:first-child {
-    text-align: center;           /* Riêng cột Mã NV căn giữa */
-    width: 90px;
+th, td {
+    border: 1px solid #cccccc;
+    padding: 10px 14px;
+    text-align: left;
 }
 
-#custom-table td:last-child {
-    text-align: right;            /* Cột Lương căn lề phải */
-    font-weight: bold;
+th {
+    background-color: #4CAF50;
+    color: #ffffff;
+    width: 35%;
 }
 
-/* 5. Màu sắc xen kẽ (Zebra Stripes) & Hiệu ứng hover */
-#custom-table tbody tr:nth-child(even) {
-    background-color: #f1f5f9;    /* Dòng chẵn có nền xám nhạt */
+a {
+    color: #1e88e5;
+    text-decoration: none;
 }
 
-#custom-table tbody tr:hover {
-    background-color: #e2e8f0;    /* Đổi màu khi rê chuột vào hàng */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Định dạng footer */
+footer {
+    margin-top: 30px;
+    padding: 25px 20px;
+    background-color: #e0e0e0;
 }

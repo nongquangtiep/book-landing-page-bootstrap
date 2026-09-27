@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="utf-8">
-    <title>Thực hành Bảng trong CSS</title>
-    <!-- Nhúng file CSS ngoài -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Cá Nhân</title>
+    <!-- Kết nối tệp CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h2>Bảng Quản Lý Nhân Viên</h2>
+    <header>
+        <h1>Chào mừng đến với trang web cá nhân của tôi</h1>
+    </header>
 
-        <table id="custom-table">
-            <thead>
-                <tr>
-                    <th>Mã NV</th>
-                    <th>Họ và Tên</th>
-                    <th>Vị Trí</th>
-                    <th>Lương (VNĐ)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>NV01</td>
-                    <td>Nguyễn Văn An</td>
-                    <td>Lập trình viên Frontend</td>
-                    <td>15,000,000</td>
-                </tr>
-                <tr>
-                    <td>NV02</td>
-                    <td>Trần Thị Bích</td>
-                    <td>Chuyên viên Thiết kế UI/UX</td>
-                    <td>14,500,000</td>
-                </tr>
-                <tr>
-                    <td>NV03</td>
-                    <td>Lê Hoàng Cường</td>
-                    <td>Quản lý Dự án</td>
-                    <td>22,000,000</td>
-                </tr>
-                <tr>
-                    <td>NV04</td>
-                    <td>Phạm Minh Đức</td>
-                    <td>Kỹ sư DevOps</td>
-                    <td>18,500,000</td>
-                </tr>
-            </tbody>
+    <main>
+        <section class="profile">
+            <!-- Bạn có thể dùng ảnh avatar.jpg trong máy hoặc link placeholder này -->
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&auto=format&fit=crop&q=80" alt="Ảnh đại diện" class="avatar">
+            <p>Xin chào! Tôi là <strong>Nông Quang Tiệp</strong>, một lập trình viên yêu thích công nghệ và phát triển web.</p>
+        </section>
+
+        <section class="hobbies">
+            <h2>Sở thích</h2>
+            <ul>
+                <li>Đọc sách công nghệ</li>
+                <li>Chơi thể thao</li>
+                <li>Lập trình Web & Hệ thống</li>
+                <li>Du lịch trải nghiệm</li>
+            </ul>
+        </section>
+
+        <section class="goals">
+            <h2>Mục tiêu học tập</h2>
+            <p>Tôi muốn trở thành một kỹ sư phần mềm chuyên nghiệp, làm chủ Frontend hiện đại và xây dựng các sản phẩm thực tế hữu ích.</p>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Thông tin liên hệ</h2>
+        <table>
+            <tr>
+                <th>Email</th>
+                <td>quangtiep@example.com</td>
+            </tr>
+            <tr>
+                <th>Facebook</th>
+                <td><a href="https://facebook.com" target="_blank">facebook.com/nongquangtiep</a></td>
+            </tr>
+            <tr>
+                <th>GitHub</th>
+                <td><a href="https://github.com/nongquangtiep" target="_blank">github.com/nongquangtiep</a></td>
+            </tr>
         </table>
-    </div>
+    </footer>
 
 </body>
 </html>
