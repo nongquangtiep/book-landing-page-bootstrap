@@ -1,42 +1,80 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Bắt buộc để padding không làm nở rộng % kích thước */
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f1f5f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    color: #1e293b;
+    padding: 30px 15px;
+    line-height: 1.6;
 }
 
-.container {
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
     background-color: #ffffff;
-    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
 }
 
-h2 {
-    font-size: 18px;
-    color: #1e3a8a;
-    margin-bottom: 16px;
+header {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 20px;
     text-align: center;
 }
 
-/* Khối nội dung giới hạn kích thước và xử lý tràn */
-.overflow-box {
-    width: 300px;
-    height: 100px;
-    background-color: lightgray;
-    padding: 10px;
-    border: 1px solid #94a3b8;
-    border-radius: 4px;
-    line-height: 1.5;
+header h1 {
+    font-size: 22px;
+}
+
+/* Khung bọc hai cột */
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Cột bên trái: Chiếm 60% chiều rộng và đẩy sang trái */
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: #e0f2fe;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #bae6fd;
+}
+
+/* Cột bên phải: Chiếm 38% chiều rộng và đẩy sang phải (còn dư 2% khoảng trống tự nhiên) */
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: #dcfce7;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #bbf7d0;
+}
+
+.left-column h2,
+.right-column h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Kỹ thuật Clearfix chuẩn: Ngăn chặn hiện tượng cha bị co rút chiều cao (Collapse height) */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer {
+    background-color: #334155;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
     font-size: 14px;
-    color: #1e293b;
-    overflow: auto; /* Tự động hiển thị thanh cuộn khi nội dung vượt quá chiều cao/rộng */
 }
