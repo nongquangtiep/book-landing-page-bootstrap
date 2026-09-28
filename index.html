@@ -3,53 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành CSS Grid - grid-row</title>
+    <title>Thực hành CSS Grid - grid-gap</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="header">
-        <h1>Thực Hành: Thuộc Tính grid-row trong CSS Grid</h1>
+        <h1>Thực Hành: Thuộc Tính grid-gap (gap)</h1>
     </header>
 
     <main class="wrapper">
-        <!-- Trường hợp 1: grid-row: 1 / 3 -->
+        <!-- VÍ DỤ 1: Khoảng cách giữa hàng và cột bằng nhau -->
         <section class="demo-box">
-            <h2>1. Mặc định: <code>grid-row: 1 / 3;</code> (Ô 1 chiếm từ đường kẻ hàng 1 đến 3)</h2>
-            <div class="grid-container">
-                <div class="item item-row-1-3">Ô 1 (Hàng 1 -> 3)</div>
-                <div class="item">Ô 2</div>
-                <div class="item">Ô 3</div>
-                <div class="item">Ô 4</div>
-                <div class="item">Ô 5</div>
-                <div class="item">Ô 6</div>
+            <h2>Ví dụ 1: Khoảng cách hàng và cột bằng nhau (<code>grid-gap: 20px;</code>)</h2>
+            <div class="grid-container grid-example-1">
+                <div>Ô 1</div>
+                <div>Ô 2</div>
+                <div>Ô 3</div>
+                <div>Ô 4</div>
             </div>
         </section>
 
-        <!-- Trường hợp 2: grid-row: 2 / 4 -->
+        <!-- VÍ DỤ 2: Khoảng cách hàng và cột khác nhau -->
         <section class="demo-box">
-            <h2>2. Thay đổi: <code>grid-row: 2 / 4;</code> (Ô 1 bắt đầu từ đường kẻ hàng 2 đến 4)</h2>
-            <div class="grid-container">
-                <div class="item item-row-2-4">Ô 1 (Hàng 2 -> 4)</div>
-                <div class="item">Ô 2</div>
-                <div class="item">Ô 3</div>
-                <div class="item">Ô 4</div>
-                <div class="item">Ô 5</div>
-                <div class="item">Ô 6</div>
-            </div>
-        </section>
-
-        <!-- Trường hợp 3: grid-row: span 2 -->
-        <section class="demo-box">
-            <h2>3. Sử dụng: <code>grid-row: span 2;</code> (Ô 1 tự động kéo dài chiếm 2 hàng)</h2>
-            <div class="grid-container">
-                <div class="item item-row-span">Ô 1 (span 2)</div>
-                <div class="item">Ô 2</div>
-                <div class="item">Ô 3</div>
-                <div class="item">Ô 4</div>
-                <div class="item">Ô 5</div>
-                <div class="item">Ô 6</div>
+            <h2>Ví dụ 2: Khoảng cách hàng và cột khác nhau (<code>grid-gap: 30px 10px;</code>)</h2>
+            <div class="grid-container grid-example-2">
+                <div>Ô 1</div>
+                <div>Ô 2</div>
+                <div>Ô 3</div>
+                <div>Ô 4</div>
+                <div>Ô 5</div>
+                <div>Ô 6</div>
             </div>
         </section>
     </main>
