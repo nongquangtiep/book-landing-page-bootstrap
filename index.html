@@ -3,58 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Gallery</title>
+    <title>Thực hành CSS Grid: grid-template-columns</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="gallery-header">
-        <h2>Responsive Image Gallery</h2>
-        <h4>Thu nhỏ hoặc phóng to cửa sổ trình duyệt để quan sát số lượng ảnh trên mỗi hàng thay đổi.</h4>
+    <header class="page-header">
+        <h1>Thực Hành: Thuộc Tính grid-template-columns Trong CSS Grid</h1>
     </header>
 
-    <div class="gallery-container">
-        <!-- Ảnh 1 -->
-        <div class="responsive">
-            <div class="gallery">
-                <a target="_blank" href="https://picsum.photos/id/1015/600/400">
-                    <img src="https://picsum.photos/id/1015/600/400" alt="Khung cảnh núi rừng" width="600" height="400">
-                </a>
-                <div class="desc">Khung cảnh thiên nhiên hùng vĩ</div>
+    <main class="demo-wrapper">
+        <!-- VÍ DỤ 1: 3 Cột kích thước bằng nhau (1fr 1fr 1fr) -->
+        <section class="demo-section">
+            <h2>Ví dụ 1: 3 cột có kích thước bằng nhau (<code>1fr 1fr 1fr</code>)</h2>
+            <div class="grid-container grid-equal">
+                <div>Ô 1</div>
+                <div>Ô 2</div>
+                <div>Ô 3</div>
+                <div>Ô 4</div>
+                <div>Ô 5</div>
+                <div>Ô 6</div>
             </div>
-        </div>
+        </section>
 
-        <!-- Ảnh 2 -->
-        <div class="responsive">
-            <div class="gallery">
-                <a target="_blank" href="https://picsum.photos/id/1016/600/400">
-                    <img src="https://picsum.photos/id/1016/600/400" alt="Hẻm núi đá" width="600" height="400">
-                </a>
-                <div class="desc">Vẻ đẹp kỳ vĩ của hẻm núi</div>
+        <!-- VÍ DỤ 2: Các cột có kích thước khác nhau (100px 200px 1fr) -->
+        <section class="demo-section">
+            <h2>Ví dụ 2: Các cột có kích thước khác nhau (<code>100px 200px 1fr</code>)</h2>
+            <div class="grid-container grid-custom">
+                <div>Cột 1 (100px)</div>
+                <div>Cột 2 (200px)</div>
+                <div>Cột 3 (1fr)</div>
+                <div>Cột 1 (100px)</div>
+                <div>Cột 2 (200px)</div>
+                <div>Cột 3 (1fr)</div>
             </div>
-        </div>
-
-        <!-- Ảnh 3 -->
-        <div class="responsive">
-            <div class="gallery">
-                <a target="_blank" href="https://picsum.photos/id/1018/600/400">
-                    <img src="https://picsum.photos/id/1018/600/400" alt="Dãy núi sương mờ" width="600" height="400">
-                </a>
-                <div class="desc">Bình minh trên đỉnh núi</div>
-            </div>
-        </div>
-
-        <!-- Ảnh 4 -->
-        <div class="responsive">
-            <div class="gallery">
-                <a target="_blank" href="https://picsum.photos/id/1019/600/400">
-                    <img src="https://picsum.photos/id/1019/600/400" alt="Bờ biển đá" width="600" height="400">
-                </a>
-                <div class="desc">Sóng biển vỗ bờ hoàng hôn</div>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
 </body>
 </html>
