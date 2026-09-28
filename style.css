@@ -6,149 +6,88 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8fafc;
     color: #333333;
-    line-height: 1.6;
-    background-color: #f1f5f9;
-}
-
-.wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-/* Header */
-.header {
-    background-color: #9933cc;
-    color: #ffffff;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 32px;
-    margin-bottom: 8px;
-}
-
-.header p {
-    font-size: 15px;
-    opacity: 0.9;
-}
-
-/* Bố cục hàng chính (Desktop dùng Flexbox) */
-.row {
-    display: flex;
     padding: 20px;
-    gap: 20px;
 }
 
-/* Cột 1: Menu bên trái (25%) */
-.col-menu {
-    flex: 25%;
+.gallery-header {
+    text-align: center;
+    margin-bottom: 25px;
 }
 
-.nav-menu {
-    list-style: none;
-}
-
-.nav-menu li {
+.gallery-header h2 {
+    font-size: 26px;
+    color: #0f172a;
     margin-bottom: 8px;
 }
 
-.nav-menu li a {
-    display: block;
-    background-color: #33b5e5;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 16px;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-}
-
-.nav-menu li a:hover {
-    background-color: #0099cc;
-}
-
-/* Cột 2: Nội dung chính (50%) */
-.col-main {
-    flex: 50%;
-    padding: 0 10px;
-}
-
-.col-main h2 {
-    font-size: 26px;
-    color: #1e293b;
-    margin-bottom: 12px;
-}
-
-.col-main p {
+.gallery-header h4 {
     font-size: 15px;
-    color: #475569;
-    margin-bottom: 14px;
+    font-weight: normal;
+    color: #64748b;
 }
 
-/* Cột 3: Khung phụ bên phải (25%) */
-.col-aside {
-    flex: 25%;
+/* Khung bọc danh sách thẻ ảnh */
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.aside-box {
-    background-color: #33b5e5;
-    color: #ffffff;
-    padding: 18px;
+/* Clearfix dọn dòng chảy float */
+.gallery-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 1. Mặc định trên màn hình lớn (> 700px): Hiển thị 4 ảnh trên một dòng (25% mỗi khối) */
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    margin-bottom: 15px;
+}
+
+/* Định dạng từng thẻ ảnh */
+.gallery {
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
     border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.aside-box h3 {
-    font-size: 16px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    padding-bottom: 4px;
+.gallery:hover {
+    border-color: #94a3b8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.aside-box p {
-    font-size: 13px;
-    margin-bottom: 14px;
-    line-height: 1.4;
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.aside-box p:last-child {
-    margin-bottom: 0;
-}
-
-/* Footer */
-.footer {
-    background-color: #0099cc;
-    color: #ffffff;
+.desc {
+    padding: 14px;
     text-align: center;
-    padding: 15px;
     font-size: 14px;
+    color: #475569;
 }
 
-/* ✅ Responsive Design (Media Queries cho màn hình Tablet & Mobile <= 768px) */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column; /* Đổi bố cục 3 cột ngang thành dọc */
-        padding: 15px;
-        gap: 15px;
+/* 2. Màn hình nhỏ hơn 700px: Hiển thị 2 ảnh trên một dòng (50% mỗi khối) */
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
     }
+}
 
-    .col-menu,
-    .col-main,
-    .col-aside {
-        flex: 100%;
+/* 3. Màn hình nhỏ hơn 500px: Hiển thị 1 ảnh trên một dòng (100% mỗi khối) */
+@media only screen and (max-width: 500px) {
+    .responsive {
         width: 100%;
-        padding: 0;
-    }
-
-    .header {
-        padding: 20px 15px;
-    }
-
-    .header h1 {
-        font-size: 24px;
     }
 }
