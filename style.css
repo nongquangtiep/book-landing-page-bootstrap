@@ -12,23 +12,23 @@ body {
     line-height: 1.6;
 }
 
-.header {
+.page-header {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.header h1 {
+.page-header h1 {
     font-size: 26px;
     color: #0f172a;
     margin-bottom: 6px;
 }
 
-.header p {
+.page-header p {
     color: #64748b;
     font-size: 15px;
 }
 
-.wrapper {
+.demo-wrapper {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
@@ -36,20 +36,20 @@ body {
     gap: 30px;
 }
 
-.demo-box {
+.demo-card {
     background-color: #ffffff;
     padding: 24px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-.demo-box h2 {
+.demo-card h2 {
     font-size: 18px;
     color: #334155;
     margin-bottom: 16px;
 }
 
-.demo-box code {
+.demo-card code {
     background-color: #e2e8f0;
     padding: 2px 6px;
     border-radius: 4px;
@@ -57,63 +57,102 @@ body {
     font-size: 14px;
 }
 
-/* Định dạng chung cho Flex Container */
-.container {
-    display: flex;
-    width: 600px;
-    min-height: 200px;
-    gap: 10px;
-    border: 2px solid #0f172a;
-    border-radius: 6px;
-    padding: 10px;
-    background-color: #f1f5f9;
-}
-
-/* Định dạng chung cho Flex Item */
+/* Base Flex Item */
 .item {
-    width: 180px;
-    height: 80px;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 6px;
+}
+
+/* =========================================
+   1. Ví dụ 1: flex-basis với đơn vị px
+   ========================================= */
+.container-px {
+    display: flex;
+    gap: 10px;
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.container-px .item {
+    background-color: lightblue;
+    color: #0369a1;
+}
+
+.item1-1 { flex-basis: 200px; }
+.item1-2 { flex-basis: 100px; }
+.item1-3 { flex-basis: 150px; }
+
+/* =========================================
+   2. Ví dụ 2: flex-basis với flex-direction: column
+   ========================================= */
+.container-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 350px;
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.item-col {
+    flex-basis: 100px;
+    background-color: lightgreen;
+    color: #166534;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* 1. Giá trị wrap */
-.wrap {
-    flex-wrap: wrap;
-}
-.wrap .item {
-    background-color: lightblue;
-    color: #0369a1;
-}
-
-/* 2. Giá trị nowrap */
-.nowrap {
-    flex-wrap: nowrap;
-}
-.nowrap .item {
-    background-color: lightgreen;
-    color: #166534;
+/* =========================================
+   3. Ví dụ 3: flex-basis với %
+   ========================================= */
+.container-percent {
+    display: flex;
+    gap: 10px;
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: 6px;
 }
 
-/* 3. Giá trị wrap-reverse */
-.wrap-reverse {
-    flex-wrap: wrap-reverse;
-}
-.wrap-reverse .item {
+.item-pct {
+    flex-basis: calc(50% - 5px); /* Trừ đi một nửa khoảng gap 10px để không rớt hàng */
     background-color: lightcoral;
     color: #7f1d1d;
 }
 
-/* 4. Giá trị initial (tương đương nowrap) */
-.initial {
-    flex-wrap: initial;
+/* =========================================
+   4. Ví dụ 4: Kết hợp flex-basis với flex-grow
+   ========================================= */
+.container-grow {
+    display: flex;
+    width: 100%;
+    max-width: 650px;
+    gap: 10px;
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: 6px;
 }
-.initial .item {
-    background-color: #fef08a;
-    color: #854d0e;
+
+.container-grow .item {
+    background-color: #fed7aa;
+    color: #9a3412;
+}
+
+.item-grow-1 {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+
+.item-grow-2 {
+    flex-basis: 100px;
+    flex-grow: 2; /* Nhận gấp đôi phần không gian còn trống */
+}
+
+.item-grow-3 {
+    flex-basis: 100px;
+    flex-grow: 1;
 }

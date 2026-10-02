@@ -3,67 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành CSS Flexbox - flex-wrap property</title>
+    <title>Thực hành CSS Flexbox - flex-basis Property</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <h1>Thực Hành: Thuộc Tính flex-wrap Trong Flexbox</h1>
-        <p>Quan sát sự thay đổi vị trí dòng của các Flex Item theo từng giá trị</p>
+    <header class="page-header">
+        <h1>Thực Hành: Thuộc Tính flex-basis Trong Flexbox</h1>
+        <p>Xác định kích thước cơ sở ban đầu của Flex Item trên trục chính (Main Axis)</p>
     </header>
 
-    <main class="wrapper">
-        <!-- 1. flex-wrap: wrap -->
-        <section class="demo-box">
-            <h2>1. <code>flex-wrap: wrap;</code> (Tự động xuống dòng từ trên xuống dưới)</h2>
-            <div class="container wrap">
-                <div class="item">Item 1</div>
-                <div class="item">Item 2</div>
-                <div class="item">Item 3</div>
-                <div class="item">Item 4</div>
-                <div class="item">Item 5</div>
-                <div class="item">Item 6</div>
+    <main class="demo-wrapper">
+        <!-- VÍ DỤ 1: Đơn vị px trên trục ngang (row) -->
+        <section class="demo-card">
+            <h2>Ví dụ 1: <code>flex-basis</code> với đơn vị <code>px</code> (200px, 100px, 150px)</h2>
+            <div class="container container-px">
+                <div class="item item1-1">Item 1 (200px)</div>
+                <div class="item item1-2">Item 2 (100px)</div>
+                <div class="item item1-3">Item 3 (150px)</div>
             </div>
         </section>
 
-        <!-- 2. flex-wrap: nowrap -->
-        <section class="demo-box">
-            <h2>2. <code>flex-wrap: nowrap;</code> (Mặc định - Cố định trên 1 dòng, item tự co lại)</h2>
-            <div class="container nowrap">
-                <div class="item">Item 1</div>
-                <div class="item">Item 2</div>
-                <div class="item">Item 3</div>
-                <div class="item">Item 4</div>
-                <div class="item">Item 5</div>
-                <div class="item">Item 6</div>
+        <!-- VÍ DỤ 2: flex-direction: column (Trục chính là chiều dọc) -->
+        <section class="demo-card">
+            <h2>Ví dụ 2: <code>flex-basis</code> theo trục dọc (<code>flex-direction: column; height: 350px;</code>)</h2>
+            <div class="container container-column">
+                <div class="item item-col">Item 1 (100px chiều dọc)</div>
+                <div class="item item-col">Item 2 (100px chiều dọc)</div>
+                <div class="item item-col">Item 3 (100px chiều dọc)</div>
             </div>
         </section>
 
-        <!-- 3. flex-wrap: wrap-reverse -->
-        <section class="demo-box">
-            <h2>3. <code>flex-wrap: wrap-reverse;</code> (Xuống dòng nhưng đảo ngược trục Cross Axis từ dưới lên)</h2>
-            <div class="container wrap-reverse">
-                <div class="item">Item 1</div>
-                <div class="item">Item 2</div>
-                <div class="item">Item 3</div>
-                <div class="item">Item 4</div>
-                <div class="item">Item 5</div>
-                <div class="item">Item 6</div>
+        <!-- VÍ DỤ 3: Đơn vị % -->
+        <section class="demo-card">
+            <h2>Ví dụ 3: <code>flex-basis</code> với đơn vị <code>%</code> (50% mỗi cột)</h2>
+            <div class="container container-percent">
+                <div class="item item-pct">Item 1 (50%)</div>
+                <div class="item item-pct">Item 2 (50%)</div>
             </div>
         </section>
 
-        <!-- 4. flex-wrap: initial -->
-        <section class="demo-box">
-            <h2>4. <code>flex-wrap: initial;</code> (Đưa về giá trị mặc định của CSS: nowrap)</h2>
-            <div class="container initial">
-                <div class="item">Item 1</div>
-                <div class="item">Item 2</div>
-                <div class="item">Item 3</div>
-                <div class="item">Item 4</div>
-                <div class="item">Item 5</div>
-                <div class="item">Item 6</div>
+        <!-- VÍ DỤ 4: Kết hợp flex-basis với flex-grow -->
+        <section class="demo-card">
+            <h2>Ví dụ 4: Kết hợp <code>flex-basis: 100px;</code> với <code>flex-grow</code> (Tỷ lệ 1 : 2 : 1)</h2>
+            <div class="container container-grow">
+                <div class="item item-grow-1">Item 1 (grow: 1)</div>
+                <div class="item item-grow-2">Item 2 (grow: 2)</div>
+                <div class="item item-grow-3">Item 3 (grow: 1)</div>
             </div>
         </section>
     </main>
