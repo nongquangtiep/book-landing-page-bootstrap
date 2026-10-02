@@ -1,4 +1,15 @@
-/* 1. Reset CSS cơ bản */
+/* 1. Thiết lập biến màu đơn tông (Monochromatic Color Palette) */
+:root {
+    --color-level-1: #00ADEE; /* Màu chủ đạo: Điểm nhấn, Nút CTA, Badge */
+    --color-level-2: #00B2EF; /* Màu bậc 2 */
+    --color-level-4: #00BFF2; /* Màu bậc 4: Header, Banner */
+    --color-level-7: #8DD7F7; /* Màu bậc 7: Khu vực nội dung */
+    --color-level-9: #C6E9FA; /* Màu bậc 9: Footer */
+    --color-text-dark: #1e293b;
+    --color-white: #ffffff;
+}
+
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -7,218 +18,255 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f1f5f9;
-    color: #1e293b;
+    color: var(--color-text-dark);
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: #f8fafc;
 }
 
-/* 2. Header */
-.header {
-    background-color: #1e293b;
-    color: #ffffff;
-    padding: 30px 20px;
-    text-align: center;
-    border-bottom: 3px solid #3b82f6;
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Header: Nền màu bậc 4 (#00BFF2) */
+.main-header {
+    background-color: var(--color-level-4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
 }
 
 .logo {
-    font-size: 28px;
-    letter-spacing: 0.5px;
-    margin-bottom: 6px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
 }
 
-.tagline {
-    font-size: 14px;
-    color: #94a3b8;
-}
-
-/* 3. Navigation Menu */
-.navigation {
-    background-color: #0f172a;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.nav-list {
+.main-nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 0 15px;
-    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.nav-list li a {
-    display: block;
-    padding: 14px 18px;
-    color: #cbd5e1;
+.main-nav ul li a {
     text-decoration: none;
+    color: var(--color-white);
+    font-weight: 600;
     font-size: 15px;
-    font-weight: 500;
-    transition: all 0.2s ease;
+    padding: 6px 14px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
 
-.nav-list li a:hover,
-.nav-list li a.active {
-    color: #ffffff;
-    background-color: #1e3a8a;
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    background-color: var(--color-level-1);
 }
 
-/* 4. Content Section (Bố cục 2 cột) */
-.content-wrapper {
-    max-width: 1100px;
-    width: 90%;
-    margin: 30px auto;
-    display: flex;
+/* Hero Banner */
+.hero-banner {
+    background-color: var(--color-level-4);
+    color: var(--color-white);
+    padding: 40px 20px 60px;
+    border-bottom: 3px solid var(--color-level-2);
+}
+
+.hero-banner h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero-banner p {
+    font-size: 16px;
+    color: #e0f2fe;
+}
+
+/* 3. Phần nội dung: Nền màu bậc 7 (#8DD7F7) */
+.content-section {
+    background-color: var(--color-level-7);
+    padding: 50px 0 70px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 26px;
+    color: var(--color-text-dark);
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+/* Product Cards Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    flex: 1; /* Đẩy footer luôn bám đáy trang */
 }
 
-/* Main Articles */
-.main-articles {
-    flex: 2.5;
-}
-
-.article-card {
-    background-color: #ffffff;
-    border-radius: 8px;
+.product-card {
+    background-color: var(--color-white);
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.article-img {
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-box {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-img-box img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-.article-body {
-    padding: 25px;
+/* 4. Nhãn ON SALE / PREVIEW: Màu bậc 1 (#00ADEE) */
+.badge-sale {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--color-level-1);
+    color: var(--color-white);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
 }
 
-.article-body h2 {
-    font-size: 24px;
-    color: #0f172a;
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    color: var(--color-text-dark);
     margin-bottom: 8px;
 }
 
-.article-meta {
-    font-size: 13px;
-    color: #64748b;
-    margin-bottom: 16px;
-}
-
-.article-body p {
-    margin-bottom: 14px;
-    color: #334155;
-}
-
-.article-body code {
-    background-color: #e2e8f0;
-    padding: 2px 6px;
-    border-radius: 4px;
+.card-body .description {
     font-size: 14px;
+    color: #475569;
+    margin-bottom: 18px;
+    flex: 1;
 }
 
-/* Sidebar */
-.sidebar {
-    flex: 1;
+.card-bottom {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 12px;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--color-level-1);
+}
+
+.btn-preview {
+    background-color: var(--color-level-1);
+    color: var(--color-white);
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-preview:hover {
+    background-color: var(--color-level-2);
+}
+
+/* 5. Footer: Nền màu bậc 9 (#C6E9FA) */
+.main-footer {
+    background-color: var(--color-level-9);
+    color: var(--color-text-dark);
+    padding: 35px 0;
+    border-top: 2px solid var(--color-level-7);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
-.sidebar-widget {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
-}
-
-.sidebar-widget h3 {
+.footer-info h4 {
     font-size: 17px;
-    color: #1e293b;
-    margin-bottom: 12px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid #3b82f6;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: var(--color-text-dark);
 }
 
-.widget-list {
-    list-style: none;
-}
-
-.widget-list li {
-    margin-bottom: 8px;
-}
-
-.widget-list li a {
-    color: #2563eb;
-    text-decoration: none;
+.footer-info p {
     font-size: 14px;
-}
-
-.widget-list li a:hover {
-    text-decoration: underline;
-}
-
-.info-box p {
-    font-size: 14px;
-    color: #475569;
-}
-
-/* 5. Footer */
-.footer {
-    background-color: #0f172a;
-    color: #94a3b8;
-    text-align: center;
-    padding: 25px 20px;
-    font-size: 14px;
-    margin-top: auto;
+    color: #334155;
 }
 
 .footer-links {
-    margin-top: 8px;
+    text-align: right;
+    font-size: 14px;
 }
 
-.footer-links a {
-    color: #cbd5e1;
+.sub-links a {
+    color: var(--color-level-1);
     text-decoration: none;
-    margin: 0 6px;
+    font-weight: 500;
 }
 
-.footer-links a:hover {
-    color: #ffffff;
+.sub-links a:hover {
     text-decoration: underline;
 }
 
-/* 6. Responsive Media Query */
-@media (max-width: 768px) {
-    .content-wrapper {
+/* 6. Responsive Media Queries */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
         flex-direction: column;
-        margin: 20px auto;
+        gap: 12px;
     }
 
-    .article-img {
-        height: 200px;
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 
-    .nav-list {
+    .footer-content {
         flex-direction: column;
-        align-items: center;
-        gap: 0;
+        text-align: center;
     }
 
-    .nav-list li a {
-        padding: 10px;
-        width: 100%;
+    .footer-links {
         text-align: center;
     }
 }

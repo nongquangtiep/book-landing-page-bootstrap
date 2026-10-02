@@ -3,79 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phân Tích & Xây Dựng Cấu Trúc Website Template</title>
+    <title>Thực Hành Phối Màu Đơn Tông (Monochromatic)</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <!-- 1. Header: Chứa tiêu đề & định danh trang web -->
-    <header class="header">
-        <div class="header-inner">
-            <h1 class="logo">TechPulse Magazine</h1>
-            <p class="tagline">Cập nhật tin tức và kiến thức lập trình hiện đại</p>
-        </div>
-    </header>
-
-    <!-- 2. Navigation Menu: Tối thiểu 4 mục điều hướng -->
-    <nav class="navigation">
-        <ul class="nav-list">
-            <li><a href="#" class="active">Trang chủ</a></li>
-            <li><a href="#articles">Bài viết</a></li>
-            <li><a href="#topics">Chủ đề</a></li>
-            <li><a href="#about">Về chúng tôi</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-    </nav>
-
-    <!-- 3. Content Section: Bố cục nội dung chính kèm ảnh và văn bản -->
-    <main class="content-wrapper" id="articles">
-        <!-- Vùng bài viết trung tâm -->
-        <section class="main-articles">
-            <article class="article-card">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Hình ảnh minh họa công nghệ" class="article-img">
-                <div class="article-body">
-                    <h2>Làm Chủ Tư Duy Dàn Bố Cục Với HTML5 &amp; CSS3</h2>
-                    <p class="article-meta">Đăng ngày 02/10/2026 &bull; Tác giả: CodeGym Developer</p>
-                    <p>
-                        Việc phân chia một trang web thành các khối ngữ nghĩa (Semantic Tags) như <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, và <code>&lt;footer&gt;</code> không chỉ giúp mã nguồn rõ ràng, dễ bảo trì mà còn hỗ trợ tối ưu SEO và khả năng tiếp cận (Accessibility).
-                    </p>
-                    <p>
-                        Kết hợp các kỹ thuật hiển thị Flexbox và CSS Grid giúp cấu trúc giao diện co giãn mượt mà trên mọi độ phân giải màn hình từ máy tính để bàn đến thiết bị di động.
-                    </p>
+    <div class="page-wrapper">
+        <!-- Bước 2: Header với màu nền Bậc 4 (#00BFF2) -->
+        <header class="main-header">
+            <div class="container header-container">
+                <div class="logo">
+                    <i class="fas fa-gem me-2"></i>TechBrand
                 </div>
-            </article>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="active">Trang chủ</a></li>
+                        <li><a href="#products">Sản phẩm</a></li>
+                        <li><a href="#about">Giới thiệu</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Banner mở đầu -->
+        <section class="hero-banner">
+            <div class="container text-center">
+                <h1>Bộ Sưu Tập Công Nghệ Mới</h1>
+                <p>Khám phá phong cách thiết kế hiện đại với kỹ thuật phối màu đơn tông</p>
+            </div>
         </section>
 
-        <!-- Sidebar phụ trợ -->
-        <aside class="sidebar" id="topics">
-            <div class="sidebar-widget">
-                <h3>Chủ Đề Nổi Bật</h3>
-                <ul class="widget-list">
-                    <li><a href="#">&bull; Cấu trúc Semantic HTML5</a></li>
-                    <li><a href="#">&bull; Flexbox vs CSS Grid</a></li>
-                    <li><a href="#">&bull; Tối ưu Responsive Web Design</a></li>
-                    <li><a href="#">&bull; UI/UX Best Practices</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-widget info-box">
-                <h3>Về Dự Án</h3>
-                <p>Website template mẫu phục vụ bài thực hành phân tích và tái hiện bố cục chuẩn giao diện web.</p>
-            </div>
-        </aside>
-    </main>
+        <!-- Bước 4: Phần nội dung với màu nền Bậc 7 (#8DD7F7) -->
+        <main class="content-section" id="products">
+            <div class="container">
+                <h2 class="section-title">Sản Phẩm Khuyến Mãi</h2>
 
-    <!-- 4. Footer: Chứa thông tin bản quyền -->
-    <footer class="footer" id="contact">
-        <div class="footer-inner">
-            <p>&copy; 2026 TechPulse Magazine. Tất cả các quyền được bảo lưu.</p>
-            <p class="footer-links">
-                <a href="#">Chính sách bảo mật</a> | 
-                <a href="#">Điều khoản sử dụng</a> | 
-                <a href="#">Sơ đồ trang</a>
-            </p>
-        </div>
-    </footer>
+                <div class="product-grid">
+                    <!-- Sản phẩm 1 -->
+                    <article class="product-card">
+                        <div class="card-img-box">
+                            <!-- Bước 3: Nhãn ON SALE với tông màu Bậc 1 (#00ADEE) -->
+                            <span class="badge badge-sale">ON SALE</span>
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Tai nghe không dây">
+                        </div>
+                        <div class="card-body">
+                            <h3>Tai Nghe Bluetooth Pro</h3>
+                            <p class="description">Chống ồn chủ động, âm thanh sắc nét chuẩn studio và thời lượng pin 40 giờ.</p>
+                            <div class="card-bottom">
+                                <span class="price">1.890.000₫</span>
+                                <button class="btn btn-preview">PREVIEW</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sản phẩm 2 -->
+                    <article class="product-card">
+                        <div class="card-img-box">
+                            <span class="badge badge-sale">ON SALE</span>
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Đồng hồ thông minh">
+                        </div>
+                        <div class="card-body">
+                            <h3>Đồng Hồ SmartWatch S3</h3>
+                            <p class="description">Theo dõi nhịp tim 24/7, màn hình AMOLED độ nét cao cùng chuẩn kháng nước 5ATM.</p>
+                            <div class="card-bottom">
+                                <span class="price">2.450.000₫</span>
+                                <button class="btn btn-preview">PREVIEW</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sản phẩm 3 -->
+                    <article class="product-card">
+                        <div class="card-img-box">
+                            <span class="badge badge-sale">ON SALE</span>
+                            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80" alt="Kính mắt thông minh">
+                        </div>
+                        <div class="card-body">
+                            <h3>Kính Mát Tích Hợp Loa</h3>
+                            <p class="description">Kết nối đàm thoại tiện lợi, tròng kính phân cực chống tia UV 100%.</p>
+                            <div class="card-bottom">
+                                <span class="price">1.250.000₫</span>
+                                <button class="btn btn-preview">PREVIEW</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bước 5: Footer với màu nền Bậc 9 (#C6E9FA) -->
+        <footer class="main-footer" id="contact">
+            <div class="container footer-content">
+                <div class="footer-info">
+                    <h4>TechBrand Store</h4>
+                    <p>Hệ thống cung cấp giải pháp và phụ kiện công nghệ hàng đầu.</p>
+                </div>
+                <div class="footer-links">
+                    <p>&copy; 2026 TechBrand. Tất cả các quyền được bảo lưu.</p>
+                    <p class="sub-links">
+                        <a href="#">Chính sách bảo mật</a> | 
+                        <a href="#">Điều khoản dịch vụ</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>
