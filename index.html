@@ -3,188 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoạt Hình Thiếu Nhi Tuyển Chọn - An Toàn &amp; Bổ Ích</title>
-    <!-- Nhúng file CSS tùy chỉnh bên ngoài -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Thực Hành SASS CLI &amp; npm</title>
+    <!-- Nhúng file CSS được biên dịch tự động từ SASS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- 1. HEADER CỐ ĐỊNH & HEAD-LINK -->
-    <header class="main-header">
-        <div class="header-container">
-            <!-- Logo bên trái -->
-            <div class="logo">
-                <a href="#">
-                    <i class="fas fa-play-circle logo-icon"></i>
-                    <span class="logo-text">Kids<span>Toon</span></span>
-                </a>
-            </div>
+    <main class="container">
+        <header class="header">
+            <h1>Thực Hành Cài Đặt SASS bằng npm &amp; SASS CLI</h1>
+            <p>Trang web minh họa kết quả sau khi biên dịch SCSS sang CSS thành công</p>
+        </header>
 
-            <!-- Thanh tìm kiếm nhanh theo tên phim -->
-            <div class="search-bar">
-                <input type="text" placeholder="Tìm kiếm tên phim hoạt hình...">
-                <button type="button"><i class="fas fa-search"></i></button>
-            </div>
+        <section class="card">
+            <h2>Kiểm tra tính năng biên dịch SASS</h2>
+            <p>Dự án này sử dụng SASS CLI để tự động theo dõi và chuyển đổi SCSS sang CSS thuần. Các kỹ thuật SCSS đã được áp dụng:</p>
+            <ul class="badge-list">
+                <li>Variables ($)</li>
+                <li>@import</li>
+                <li>Nesting</li>
+                <li>Parent Selector (&amp;)</li>
+            </ul>
+            <a href="#" class="btn">Thử nghiệm Button SCSS</a>
+        </section>
+    </main>
 
-            <!-- Head-link: Danh mục các liên kết chuyển hướng -->
-            <nav class="head-link">
-                <ul>
-                    <li><a href="#" class="active"><i class="fas fa-house"></i> Trang chủ</a></li>
-                    <li><a href="#new"><i class="fas fa-clock"></i> Mới cập nhật</a></li>
-                    <li><a href="#popular"><i class="fas fa-fire"></i> Xem nhiều nhất</a></li>
-                    <li><a href="#contact"><i class="fas fa-info-circle"></i> Giới thiệu</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- 2. CONTENT WRAPPER: Chia thành 2 cột Left Content và Right Content -->
-    <div class="content-wrapper">
-        <div class="content-container">
-
-            <!-- LEFT CONTENT: Menu hiển thị danh sách video tuyển chọn -->
-            <aside class="left-content">
-                <div class="sidebar-header">
-                    <h3><i class="fas fa-list-ul"></i> Danh Sách Hoạt Hình</h3>
-                    <span class="sub-text">Thuyết minh tiếng Việt &bull; Chuẩn HD</span>
-                </div>
-
-                <div class="video-list">
-                    <!-- Mục video 1 (Đang chọn) -->
-                    <div class="video-item active" onclick="switchVideo('youtube')">
-                        <div class="video-thumb">
-                            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=300&q=80" alt="Big Buck Bunny">
-                            <span class="video-duration">10:34</span>
-                        </div>
-                        <div class="video-info">
-                            <h4 class="video-title">Tập 1: Chú Thỏ Vui Nhộn (Big Buck Bunny)</h4>
-                            <p class="video-meta"><i class="fas fa-eye"></i> 1.2M lượt xem &bull; Thuyết minh</p>
-                        </div>
-                    </div>
-
-                    <!-- Mục video 2 -->
-                    <div class="video-item" onclick="switchVideo('html5')">
-                        <div class="video-thumb">
-                            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=300&q=80" alt="Sintel">
-                            <span class="video-duration">15:02</span>
-                        </div>
-                        <div class="video-info">
-                            <h4 class="video-title">Tập 2: Chú Rồng Tí Hon (Sintel Adventure)</h4>
-                            <p class="video-meta"><i class="fas fa-eye"></i> 890K lượt xem &bull; Thuyết minh</p>
-                        </div>
-                    </div>
-
-                    <!-- Mục video 3 -->
-                    <div class="video-item">
-                        <div class="video-thumb">
-                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=300&q=80" alt="Cổ tích">
-                            <span class="video-duration">12:45</span>
-                        </div>
-                        <div class="video-info">
-                            <h4 class="video-title">Tập 3: Cuộc Phiêu Lưu Của Chú Cá Heo Xanh</h4>
-                            <p class="video-meta"><i class="fas fa-eye"></i> 650K lượt xem &bull; Lồng tiếng</p>
-                        </div>
-                    </div>
-
-                    <!-- Mục video 4 -->
-                    <div class="video-item">
-                        <div class="video-thumb">
-                            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=300&q=80" alt="Thế giới thần tiên">
-                            <span class="video-duration">08:20</span>
-                        </div>
-                        <div class="video-info">
-                            <h4 class="video-title">Tập 4: Bài Học Về Lòng Tốt Và Sự Sẻ Chia</h4>
-                            <p class="video-meta"><i class="fas fa-eye"></i> 430K lượt xem &bull; Giáo dục</p>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-
-            <!-- RIGHT CONTENT: Khu vực phát video chính (Player Area) -->
-            <main class="right-content">
-                <!-- Vùng chứa khung video -->
-                <div class="player-wrapper">
-                    <!-- 1. Nhúng Video bằng <iframe> (Mặc định hiển thị YouTube Embed) -->
-                    <div id="youtubePlayer" class="video-box active-player">
-                        <iframe 
-                            src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ?rel=0&amp;modestbranding=1" 
-                            title="Hoạt hình vui nhộn - YouTube Player" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-
-                    <!-- 2. Nhúng Video bằng thẻ <video> của HTML5 (Dự phòng theo yêu cầu đề bài) -->
-                    <div id="html5Player" class="video-box" style="display: none;">
-                        <video controls poster="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80">
-                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-                            Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
-                        </video>
-                    </div>
-                </div>
-
-                <!-- Nút chuyển đổi chế độ xem: Giữa Thẻ <video> và <iframe> -->
-                <div class="player-controls">
-                    <span class="control-label"><i class="fas fa-sliders"></i> Nguồn phát:</span>
-                    <button type="button" class="btn-source active" onclick="switchVideo('youtube')">
-                        <i class="fab fa-youtube text-red"></i> YouTube (iframe)
-                    </button>
-                    <button type="button" class="btn-source" onclick="switchVideo('html5')">
-                        <i class="fas fa-file-video text-blue"></i> HTML5 Video (&lt;video&gt;)
-                    </button>
-                </div>
-
-                <!-- Chi tiết mô tả phim -->
-                <article class="video-details">
-                    <h1 class="main-video-title">Tập 1: Chú Thỏ Vui Nhộn (Big Buck Bunny) - Thuyết Minh Trọn Bộ</h1>
-                    <div class="video-badge-group">
-                        <span class="badge badge-quality"><i class="fas fa-badge-check"></i> FullHD 1080p</span>
-                        <span class="badge badge-adfree"><i class="fas fa-shield-alt"></i> Không quảng cáo</span>
-                        <span class="badge badge-lang"><i class="fas fa-volume-high"></i> Thuyết minh Tiếng Việt</span>
-                    </div>
-
-                    <p class="video-desc">
-                        Bộ phim xoay quanh chuyến dạo chơi của chú thỏ khổng lồ tốt bụng và cách xử lý những tình huống trêu đùa tinh nghịch từ nhóm bạn trong khu rừng. Nội dung mang tính giáo dục sâu sắc, giúp các bạn nhỏ hình thành tính trung thực, sự can đảm và lòng yêu thương động vật xung quanh.
-                    </p>
-                </article>
-            </main>
-
-        </div>
-    </div>
-
-    <!-- 3. FOOTER: Thông tin bản quyền -->
-    <footer class="main-footer" id="contact">
-        <div class="footer-container">
-            <p class="copyright">&copy; 2026 KidsToon Network. Tất cả nội dung được tuyển chọn và kiểm duyệt an toàn cho trẻ em.</p>
-            <div class="footer-links">
-                <a href="#">Tiêu chuẩn cộng đồng</a> &bull; 
-                <a href="#">Chính sách riêng tư cho trẻ em</a> &bull; 
-                <a href="#">Hỗ trợ phụ huynh</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Script nhỏ hỗ trợ chuyển đổi mượt mà giữa thẻ <video> và <iframe> -->
-    <script>
-        function switchVideo(type) {
-            const yt = document.getElementById('youtubePlayer');
-            const h5 = document.getElementById('html5Player');
-            const btns = document.querySelectorAll('.btn-source');
-
-            if (type === 'youtube') {
-                yt.style.display = 'block';
-                h5.style.display = 'none';
-                btns[0].classList.add('active');
-                btns[1].classList.remove('active');
-            } else {
-                yt.style.display = 'none';
-                h5.style.display = 'block';
-                btns[0].classList.remove('active');
-                btns[1].classList.add('active');
-            }
-        }
-    </script>
 </body>
 </html>
