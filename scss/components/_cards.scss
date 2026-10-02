@@ -1,21 +1,35 @@
-.card {
+// Phục vụ: [Bài tập] Dựng phần sản phẩm nổi bật
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
   background-color: $bg-card;
-  border-radius: $radius;
+  border-radius: $radius-base;
   border: 1px solid $border-color;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  @include card-shadow;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  @include shadow-box;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
 
-  .card-img-wrapper {
+  .card-media {
     position: relative;
-    padding-top: 56.25%; // Tỷ lệ 16:9
-    overflow: hidden;
-    background-color: #e5e7eb;
+    padding-top: 60%;
+    background-color: #cbd5e1;
 
     img {
       position: absolute;
@@ -25,35 +39,41 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: $accent-color;
+      color: #ffffff;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
   }
 
-  .card-body {
-    padding: 16px;
+  .card-content {
+    padding: 20px;
 
-    .card-title {
-      font-size: 17px;
+    .item-title {
+      font-size: 18px;
       margin-bottom: 8px;
-      color: $text-main;
     }
 
-    .card-desc {
+    .item-desc {
       font-size: 14px;
-      margin-bottom: 14px;
+      color: $text-muted;
+      margin-bottom: 16px;
     }
 
-    .card-btn {
-      display: inline-block;
-      text-decoration: none;
-      background-color: $primary-color;
-      color: #ffffff;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-size: 13px;
-      font-weight: 600;
-      transition: background-color 0.2s ease;
+    .card-footer-action {
+      @include flex-align(space-between, center);
 
-      &:hover {
-        background-color: $primary-dark;
+      .price {
+        font-size: 18px;
+        font-weight: 700;
+        color: $primary-color;
       }
     }
   }

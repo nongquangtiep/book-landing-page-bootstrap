@@ -3,69 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tái Cấu Trúc CSS Sang SASS - Responsive Grid</title>
+  <title>Tái Cấu Trúc CSS Landing Page Sang SASS</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
+  <!-- 1. NAVIGATION & HEADER -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="header-title">Hệ Thống Responsive Grid Với SASS</h1>
-      <p class="header-subtitle">Mã nguồn tái cấu trúc từ CSS thuần sang cấu trúc phân tầng SCSS</p>
+    <div class="container navbar">
+      <a href="#" class="logo">Code<span>Gym</span></a>
+      <ul class="nav-links">
+        <li><a href="#hero">Trang chủ</a></li>
+        <li><a href="#products">Sản phẩm</a></li>
+        <li><a href="#stats">Thống kê</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+      <a href="#products" class="btn btn-primary">Khám Phá Ngay</a>
     </div>
   </header>
 
-  <main class="container">
-    <div class="grid">
-      <!-- Item 1 -->
-      <article class="card">
-        <div class="card-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=80" alt="Tech">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Mô-đun Hệ Thống</h2>
-          <p class="card-desc">Quản lý và đồng bộ cấu trúc biến, mixins và layout bằng SASS CLI.</p>
-          <a href="#" class="card-btn">Xem chi tiết</a>
-        </div>
-      </article>
-
-      <!-- Item 2 -->
-      <article class="card">
-        <div class="card-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80" alt="Coding">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Responsive Design</h2>
-          <p class="card-desc">Tự động điều chỉnh số lượng cột trên Desktop, Tablet và Mobile.</p>
-          <a href="#" class="card-btn">Xem chi tiết</a>
-        </div>
-      </article>
-
-      <!-- Item 3 -->
-      <article class="card">
-        <div class="card-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80" alt="Laptop">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Tối Ưu Mã Nguồn</h2>
-          <p class="card-desc">Tách nhỏ file với partials giúp bảo trì và mở rộng giao diện nhanh chóng.</p>
-          <a href="#" class="card-btn">Xem chi tiết</a>
-        </div>
-      </article>
-
-      <!-- Item 4 -->
-      <article class="card">
-        <div class="card-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80" alt="Security">
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">Bảo Trì Dễ Dàng</h2>
-          <p class="card-desc">Thay đổi toàn bộ giao diện chỉ bằng cách chỉnh sửa file biến variables.</p>
-          <a href="#" class="card-btn">Xem chi tiết</a>
-        </div>
-      </article>
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <h1>Nền Tảng Đào Tạo Lập Trình Chuyên Nghiệp</h1>
+      <p>Cung cấp các khóa học thực chiến từ HTML, CSS, SASS đến các công nghệ Web hiện đại nhất.</p>
+      <a href="#products" class="btn btn-primary">Đăng Ký Học Thử</a>
     </div>
-  </main>
+  </section>
+
+  <!-- 2. SẢN PHẨM NỔI BẬT -->
+  <section class="section-padding" id="products">
+    <div class="container">
+      <h2 class="section-title">Khóa Học &amp; Sản Phẩm Nổi Bật</h2>
+      <p class="section-subtitle">Chương trình học bài bản được chuẩn hóa từ cơ bản tới nâng cao</p>
+      
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80" alt="Khóa học Frontend">
+            <span class="badge">Hot</span>
+          </div>
+          <div class="card-content">
+            <h3 class="item-title">Khóa Học Frontend Cơ Bản</h3>
+            <p class="item-desc">Làm chủ HTML5, CSS3, Flexbox, Grid và biên dịch SCSS chuyên nghiệp.</p>
+            <div class="card-footer-action">
+              <span class="price">4.990.000đ</span>
+              <a href="#" class="btn btn-outline">Chi tiết</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80" alt="Khóa học Backend">
+            <span class="badge">Mới</span>
+          </div>
+          <div class="card-content">
+            <h3 class="item-title">Khóa Học Backend Chuyên Sâu</h3>
+            <p class="item-desc">Xây dựng ứng dụng doanh nghiệp chuẩn RESTful API, Database và Docker.</p>
+            <div class="card-footer-action">
+              <span class="price">6.500.000đ</span>
+              <a href="#" class="btn btn-outline">Chi tiết</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=80" alt="Luyện đề chuyên nghiệp">
+            <span class="badge">Thực chiến</span>
+          </div>
+          <div class="card-content">
+            <h3 class="item-title">Fullstack Web Developer</h3>
+            <p class="item-desc">Đào tạo từ số 0 đến lập trình viên tự tin làm việc tại các doanh nghiệp CNTT.</p>
+            <div class="card-footer-action">
+              <span class="price">9.800.000đ</span>
+              <a href="#" class="btn btn-outline">Chi tiết</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SỐ LIỆU THỐNG KÊ -->
+  <section class="section-padding stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">10K+</div>
+          <div class="stat-label">Học viên tốt nghiệp</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">95%</div>
+          <div class="stat-label">Có việc làm sau tốt nghiệp</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Doanh nghiệp đối tác</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Giảng viên chuyên gia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FOOTER -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Về CodeGym</h4>
+          <p>Hệ thống đào tạo lập trình hiện đại, cam kết chất lượng đầu ra và đồng hành trọn đời cùng học viên trên con đường công nghệ.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Khóa học</h4>
+          <ul>
+            <li><a href="#">Lập trình Web</a></li>
+            <li><a href="#">Java Fullstack</a></li>
+            <li><a href="#">Node.js &amp; SASS</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Liên kết</h4>
+          <ul>
+            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="#">Cơ hội nghề nghiệp</a></li>
+            <li><a href="#">Tin tức tuyển dụng</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="#">Trung tâm trợ giúp</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+            <li><a href="#">Điều khoản sử dụng</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeGym Việt Nam. Bản quyền mã nguồn tái cấu trúc thuộc về bài tập thực hành SASS.</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

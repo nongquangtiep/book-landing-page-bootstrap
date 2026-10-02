@@ -1,0 +1,41 @@
+// Phục vụ: [Bài tập] Dựng phần số liệu thống kê
+.stats-section {
+  background-color: #ffffff;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @include respond-to(mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    padding: 20px 10px;
+
+    .stat-number {
+      font-size: 42px;
+      font-weight: 800;
+      color: $primary-color;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: $text-muted;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+}

@@ -1,8 +1,17 @@
-// Nạp các partials theo thứ tự chuẩn
+// 1. Abstracts
 @import "abstracts/variables";
 @import "abstracts/mixins";
+
+// 2. Base
 @import "base/reset";
 @import "base/typography";
+
+// 3. Layout
 @import "layout/grid";
 @import "layout/header";
-@import "components/card";
+@import "layout/footer";
+
+// 4. Components
+@import "components/buttons";
+@import "components/cards";
+@import "components/stats";

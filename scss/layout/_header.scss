@@ -1,17 +1,72 @@
+// Phục vụ: [Bài tập] Dựng navigation và header
 .site-header {
   background-color: #ffffff;
   border-bottom: 1px solid $border-color;
-  padding: 24px 0;
-  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .navbar {
+    @include flex-align(space-between, center);
+    height: 70px;
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: $primary-color;
+
+      span {
+        color: $accent-color;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+
+      li a {
+        font-size: 14px;
+        font-weight: 500;
+        color: $text-body;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      @include respond-to(tablet) {
+        display: none;
+      }
+    }
+  }
+}
+
+.hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: #ffffff;
+  padding: 80px 0;
   text-align: center;
 
-  .header-title {
-    font-size: 28px;
-    color: $primary-color;
-    margin-bottom: 6px;
-  }
+  .hero-content {
+    max-width: 750px;
+    margin: 0 auto;
 
-  .header-subtitle {
-    font-size: 15px;
+    h1 {
+      font-size: 40px;
+      color: #ffffff;
+      margin-bottom: 16px;
+
+      @include respond-to(mobile) {
+        font-size: 28px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 28px;
+    }
   }
 }
