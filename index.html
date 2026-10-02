@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành CSS Flexbox - flex-grow Property</title>
+    <title>Thực hành CSS Flexbox - flex-flow Property</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="header">
-        <h1>Thực Hành: Thuộc Tính flex-grow Trong Flexbox</h1>
-        <p>Kiểm tra khả năng phân phối không gian trống cho các Flex Item</p>
+        <h1>Thực Hành: Thuộc Tính flex-flow Trong Flexbox</h1>
+        <p>Viết tắt kết hợp giữa flex-direction và flex-wrap</p>
     </header>
 
     <main class="wrapper">
+        <!-- VÍ DỤ 1: row nowrap -->
         <section class="demo-box">
-            <h2>Ví dụ: 5 Flex Items (Div thứ 2 có <code>flex-grow: 3;</code>, các div còn lại <code>flex-grow: 1;</code>)</h2>
-            <div class="flex-container">
-                <div class="item">Div 1</div>
-                <div class="item item-grow">Div 2 (Grow: 3)</div>
-                <div class="item">Div 3</div>
-                <div class="item">Div 4</div>
-                <div class="item">Div 5</div>
+            <h2>1. <code>flex-flow: row nowrap;</code> (Sắp xếp từ trái sang phải, không xuống dòng)</h2>
+            <div class="container container-1">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </section>
+
+        <!-- VÍ DỤ 2: row-reverse nowrap -->
+        <section class="demo-box">
+            <h2>2. <code>flex-flow: row-reverse nowrap;</code> (Sắp xếp từ phải sang trái, không xuống dòng)</h2>
+            <div class="container container-2">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
             </div>
         </section>
     </main>
