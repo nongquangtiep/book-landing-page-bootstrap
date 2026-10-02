@@ -3,114 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực Hành Phối Màu Đơn Tông (Monochromatic)</title>
-    <!-- Nhúng file CSS ngoài -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Phối Màu Newsletter - Adobe Color Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light d-flex align-items-center min-vh-100">
 
-    <div class="page-wrapper">
-        <!-- Bước 2: Header với màu nền Bậc 4 (#00BFF2) -->
-        <header class="main-header">
-            <div class="container header-container">
-                <div class="logo">
-                    <i class="fas fa-gem me-2"></i>TechBrand
-                </div>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#" class="active">Trang chủ</a></li>
-                        <li><a href="#products">Sản phẩm</a></li>
-                        <li><a href="#about">Giới thiệu</a></li>
-                        <li><a href="#contact">Liên hệ</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+    <div class="container py-5 text-center">
+        <h1 class="display-6 fw-bold mb-3 text-dark">Bài Tập: Phối Màu Cho Newsletter</h1>
+        <p class="text-secondary col-lg-8 mx-auto mb-5">
+            Dự án xây dựng 2 phiên bản giao diện với cấu trúc Bootstrap và 2 bộ bảng màu Adobe Color độc lập (Trello Fresh &amp; Corporate Navy).
+        </p>
 
-        <!-- Banner mở đầu -->
-        <section class="hero-banner">
-            <div class="container text-center">
-                <h1>Bộ Sưu Tập Công Nghệ Mới</h1>
-                <p>Khám phá phong cách thiết kế hiện đại với kỹ thuật phối màu đơn tông</p>
-            </div>
-        </section>
-
-        <!-- Bước 4: Phần nội dung với màu nền Bậc 7 (#8DD7F7) -->
-        <main class="content-section" id="products">
-            <div class="container">
-                <h2 class="section-title">Sản Phẩm Khuyến Mãi</h2>
-
-                <div class="product-grid">
-                    <!-- Sản phẩm 1 -->
-                    <article class="product-card">
-                        <div class="card-img-box">
-                            <!-- Bước 3: Nhãn ON SALE với tông màu Bậc 1 (#00ADEE) -->
-                            <span class="badge badge-sale">ON SALE</span>
-                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Tai nghe không dây">
-                        </div>
-                        <div class="card-body">
-                            <h3>Tai Nghe Bluetooth Pro</h3>
-                            <p class="description">Chống ồn chủ động, âm thanh sắc nét chuẩn studio và thời lượng pin 40 giờ.</p>
-                            <div class="card-bottom">
-                                <span class="price">1.890.000₫</span>
-                                <button class="btn btn-preview">PREVIEW</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Sản phẩm 2 -->
-                    <article class="product-card">
-                        <div class="card-img-box">
-                            <span class="badge badge-sale">ON SALE</span>
-                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Đồng hồ thông minh">
-                        </div>
-                        <div class="card-body">
-                            <h3>Đồng Hồ SmartWatch S3</h3>
-                            <p class="description">Theo dõi nhịp tim 24/7, màn hình AMOLED độ nét cao cùng chuẩn kháng nước 5ATM.</p>
-                            <div class="card-bottom">
-                                <span class="price">2.450.000₫</span>
-                                <button class="btn btn-preview">PREVIEW</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Sản phẩm 3 -->
-                    <article class="product-card">
-                        <div class="card-img-box">
-                            <span class="badge badge-sale">ON SALE</span>
-                            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80" alt="Kính mắt thông minh">
-                        </div>
-                        <div class="card-body">
-                            <h3>Kính Mát Tích Hợp Loa</h3>
-                            <p class="description">Kết nối đàm thoại tiện lợi, tròng kính phân cực chống tia UV 100%.</p>
-                            <div class="card-bottom">
-                                <span class="price">1.250.000₫</span>
-                                <button class="btn btn-preview">PREVIEW</button>
-                            </div>
-                        </div>
-                    </article>
+        <div class="row justify-content-center g-4">
+            <div class="col-md-5">
+                <div class="card h-100 border-0 shadow-sm p-4 text-start">
+                    <span class="badge bg-primary w-auto align-self-start mb-2">Palette 1</span>
+                    <h3 class="h5 fw-bold text-primary">Trello Fresh Theme</h3>
+                    <p class="text-secondary small mb-4">Màu sắc tươi trẻ, phong cách làm việc nhóm sáng tạo dựa trên bộ phối màu tương đồng (Analogous).</p>
+                    <a href="version1.html" class="btn btn-primary mt-auto">Xem Phiên Bản 1</a>
                 </div>
             </div>
-        </main>
 
-        <!-- Bước 5: Footer với màu nền Bậc 9 (#C6E9FA) -->
-        <footer class="main-footer" id="contact">
-            <div class="container footer-content">
-                <div class="footer-info">
-                    <h4>TechBrand Store</h4>
-                    <p>Hệ thống cung cấp giải pháp và phụ kiện công nghệ hàng đầu.</p>
-                </div>
-                <div class="footer-links">
-                    <p>&copy; 2026 TechBrand. Tất cả các quyền được bảo lưu.</p>
-                    <p class="sub-links">
-                        <a href="#">Chính sách bảo mật</a> | 
-                        <a href="#">Điều khoản dịch vụ</a>
-                    </p>
+            <div class="col-md-5">
+                <div class="card h-100 border-0 shadow-sm p-4 text-start">
+                    <span class="badge bg-dark w-auto align-self-start mb-2">Palette 2</span>
+                    <h3 class="h5 fw-bold text-dark">Corporate Navy Theme</h3>
+                    <p class="text-secondary small mb-4">Màu sắc trầm ổn, chuyên nghiệp, độ tương phản cao dựa trên bộ phối màu bổ túc (Complementary).</p>
+                    <a href="version2.html" class="btn btn-dark mt-auto">Xem Phiên Bản 2</a>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
 
 </body>
