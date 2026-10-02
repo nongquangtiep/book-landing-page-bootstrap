@@ -3,35 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid Layout</title>
-    <!-- Liên kết file CSS ngoài -->
+    <title>Responsive CSS Grid Layout</title>
+    <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+    <div class="grid-container">
+        <!-- 1. Header -->
         <header class="header">
-            <h1>Header: Website Header</h1>
+            <h1>Cổng Thông Tin Công Nghệ</h1>
+            <p>Bố cục trang web hiện đại với CSS Grid & Responsive Design</p>
         </header>
 
-        <nav class="sidebar">
-            <h3>Sidebar</h3>
+        <!-- 2. Navigation -->
+        <nav class="nav">
             <ul>
                 <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Tin tức</a></li>
-                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Bài viết</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Tài nguyên</a></li>
                 <li><a href="#">Liên hệ</a></li>
             </ul>
         </nav>
 
+        <!-- 3. Main Content -->
         <main class="content">
-            <h2>Nội dung chính</h2>
-            <p>Đây là khu vực nội dung chính của trang web, được dàn bố cục bằng CSS Grid với thuộc tính <code>grid-template-areas</code>. Khi mở trên màn hình máy tính, thanh Sidebar nằm ở bên trái chiếm 1 phần, Nội dung chính chiếm 3 phần.</p>
-            <p>Khi thu nhỏ màn hình xuống dưới 768px (chế độ điện thoại), bố cục sẽ tự động chuyển thành một cột dọc theo thứ tự: Header &rarr; Sidebar &rarr; Nội dung &rarr; Footer.</p>
+            <article>
+                <h2>Tối ưu hóa bố cục bằng CSS Grid Layout</h2>
+                <p class="meta">Đăng ngày 02/10/2026 bởi CodeGym Developer</p>
+                <p>CSS Grid là công cụ dựng giao diện 2 chiều (hàng và cột) mạnh mẽ nhất trong CSS hiện đại. Nhờ vào <code>grid-template-areas</code>, việc cấu trúc các khối nội dung lớn trở nên trực quan và dễ quản lý hơn rất nhiều.</p>
+                <p>Khi kết hợp với Media Queries, chúng ta chỉ cần định nghĩa lại vùng hiển thị của từng phần tử mà không cần thay đổi cấu trúc mã nguồn HTML.</p>
+            </article>
         </main>
 
+        <!-- 4. Sidebar -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>Tin nổi bật</h3>
+                <ul>
+                    <li><a href="#">Lộ trình Frontend 2026</a></li>
+                    <li><a href="#">Kỹ thuật Grid vs Flexbox</a></li>
+                    <li><a href="#">Chuẩn SEO Semantic Tags</a></li>
+                </ul>
+            </div>
+            <div class="widget banner">
+                <h3>Quảng cáo</h3>
+                <p>Khóa học Lập trình Web Fullstack chất lượng cao tại CodeGym.</p>
+            </div>
+        </aside>
+
+        <!-- 5. Footer -->
         <footer class="footer">
-            <p>&copy; 2026 CSS Grid Layout Practice. All rights reserved.</p>
+            <p>&copy; 2026 Responsive CSS Grid Practice. Tất cả các quyền được bảo lưu.</p>
         </footer>
     </div>
 
