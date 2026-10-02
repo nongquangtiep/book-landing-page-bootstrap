@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Navbar Practice</title>
+    <title>Bootstrap Landing Page</title>
     <!-- Nhúng CSS Bootstrap 5 qua CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Nhúng file CSS tùy chỉnh ngoài -->
@@ -11,63 +11,66 @@
 </head>
 <body>
 
-    <!-- Header Navigation Bar -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-            <div class="container-fluid px-4">
-                <!-- Logo / Thương hiệu -->
-                <a class="navbar-brand fw-bold text-info" href="#">MyWebsite</a>
-
-                <!-- Nút Hamburger Toggler hiển thị trên Mobile -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Danh sách Menu điều hướng -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <!-- Mục Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Web Design</a></li>
-                                <li><a class="dropdown-item" href="#">SEO</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Software Development</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-
-                    <!-- Khung tìm kiếm phụ trợ -->
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2 form-control-sm" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-                        <button class="btn btn-outline-info btn-sm" type="submit">Search</button>
-                    </form>
-                </div>
+    <!-- 1. Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="#">MyBrand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header class="bg-primary text-white text-center py-5 hero-section">
+        <div class="container py-4">
+            <h1 class="display-5 fw-bold mb-3">Chào mừng đến với MyBrand</h1>
+            <p class="lead mb-4">Giải pháp số 1 cho doanh nghiệp của bạn</p>
+            <a href="#services" class="btn btn-light btn-lg px-4 fw-semibold text-primary">Khám phá ngay</a>
+        </div>
     </header>
 
-    <!-- Khu vực nội dung kiểm tra -->
-    <main class="container py-5 text-center">
-        <h1 class="display-6 fw-bold mb-3">Thực Hành Tạo Thanh Điều Hướng (Navbar) Với Bootstrap 5</h1>
-        <p class="lead text-secondary">
-            Thanh navbar trên đã được tích hợp đầy đủ tính năng: menu thả xuống (Dropdown) và tự động chuyển thành nút hamburger trên màn hình điện thoại.
-        </p>
-    </main>
+    <!-- 3. Grid System - Services Section -->
+    <section id="services" class="container py-5">
+        <h2 class="text-center mb-4 fw-bold">Dịch vụ của chúng tôi</h2>
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <div class="card p-4 h-100 shadow-sm border-0 service-card">
+                    <h3 class="h4 text-primary mb-3">Thiết kế Web</h3>
+                    <p class="text-secondary mb-0">Dịch vụ thiết kế web chuyên nghiệp, tối ưu chuẩn UI/UX và thân thiện trên thiết bị di động.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="card p-4 h-100 shadow-sm border-0 service-card">
+                    <h3 class="h4 text-primary mb-3">SEO & Marketing</h3>
+                    <p class="text-secondary mb-0">Nâng cao giá trị thương hiệu và đưa website tiếp cận hàng ngàn khách hàng tiềm năng.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="card p-4 h-100 shadow-sm border-0 service-card">
+                    <h3 class="h4 text-primary mb-3">Hỗ trợ 24/7</h3>
+                    <p class="text-secondary mb-0">Chúng tôi luôn sẵn sàng đồng hành, giải đáp thắc mắc và hỗ trợ kỹ thuật liên tục.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Nhúng file JS bundle của Bootstrap (chứa Popper.js phục vụ Dropdown và Collapse) -->
+    <!-- 4. Footer -->
+    <footer id="contact" class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0 text-secondary">&copy; 2026 MyBrand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Nhúng JS Bundle của Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
