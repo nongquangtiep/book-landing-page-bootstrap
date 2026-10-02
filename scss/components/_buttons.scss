@@ -1,4 +1,4 @@
-// Định dạng Component Button
+// Định nghĩa nút bấm thông qua mixin
 .button {
   @include button-style($primary-color);
 }

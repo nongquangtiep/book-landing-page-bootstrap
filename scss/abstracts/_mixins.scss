@@ -1,20 +1,25 @@
-// Khai báo các Mixins
+// Khai báo mixins tái sử dụng
 @mixin button-style($bg-color) {
   background-color: $bg-color;
   color: #ffffff;
-  padding: 10px 20px;
+  padding: $padding-standard;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: opacity 0.2s ease;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 
   &:hover {
-    opacity: 0.9;
+    background-color: darken($bg-color, 8%);
+    transform: translateY(-1px);
   }
 }
 
-@mixin box-shadow {
-  box-shadow: $box-shadow-val;
+@mixin box-style {
+  background-color: $card-bg;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: $box-shadow-default;
 }
