@@ -3,64 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Web Design</title>
+    <title>Phân Tích & Xây Dựng Cấu Trúc Website Template</title>
     <!-- Nhúng file CSS ngoài -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Thanh điều hướng cố định trên đầu trang -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#services">Dịch vụ</a></li>
-            <li><a href="#blog">Blog</a></li>
+    <!-- 1. Header: Chứa tiêu đề & định danh trang web -->
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="logo">TechPulse Magazine</h1>
+            <p class="tagline">Cập nhật tin tức và kiến thức lập trình hiện đại</p>
+        </div>
+    </header>
+
+    <!-- 2. Navigation Menu: Tối thiểu 4 mục điều hướng -->
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li><a href="#" class="active">Trang chủ</a></li>
+            <li><a href="#articles">Bài viết</a></li>
+            <li><a href="#topics">Chủ đề</a></li>
+            <li><a href="#about">Về chúng tôi</a></li>
             <li><a href="#contact">Liên hệ</a></li>
         </ul>
     </nav>
 
-    <!-- Header với nền ảnh và hiệu ứng blur -->
-    <header class="header">
-        <div class="header-content">
-            <h1>Creative Web Design</h1>
-            <p>Thiết kế website chuyên nghiệp - Hiện đại - Ấn tượng</p>
-            <a href="#services" class="btn">Khám phá ngay</a>
-        </div>
-    </header>
+    <!-- 3. Content Section: Bố cục nội dung chính kèm ảnh và văn bản -->
+    <main class="content-wrapper" id="articles">
+        <!-- Vùng bài viết trung tâm -->
+        <section class="main-articles">
+            <article class="article-card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Hình ảnh minh họa công nghệ" class="article-img">
+                <div class="article-body">
+                    <h2>Làm Chủ Tư Duy Dàn Bố Cục Với HTML5 &amp; CSS3</h2>
+                    <p class="article-meta">Đăng ngày 02/10/2026 &bull; Tác giả: CodeGym Developer</p>
+                    <p>
+                        Việc phân chia một trang web thành các khối ngữ nghĩa (Semantic Tags) như <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, và <code>&lt;footer&gt;</code> không chỉ giúp mã nguồn rõ ràng, dễ bảo trì mà còn hỗ trợ tối ưu SEO và khả năng tiếp cận (Accessibility).
+                    </p>
+                    <p>
+                        Kết hợp các kỹ thuật hiển thị Flexbox và CSS Grid giúp cấu trúc giao diện co giãn mượt mà trên mọi độ phân giải màn hình từ máy tính để bàn đến thiết bị di động.
+                    </p>
+                </div>
+            </article>
+        </section>
 
-    <!-- Content Section với Card Layout (CSS Grid) -->
-    <section class="content" id="services">
-        <h2>Dịch vụ của chúng tôi</h2>
-        <div class="card-container">
-            <!-- Card 1 -->
-            <div class="card">
-                <img src="images/service1.jpg" onerror="this.src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80'" alt="Thiết kế Website">
-                <h3>Thiết kế Website</h3>
-                <p>• Chúng tôi tạo ra những trang web chuyên nghiệp, thân thiện với người dùng.</p>
+        <!-- Sidebar phụ trợ -->
+        <aside class="sidebar" id="topics">
+            <div class="sidebar-widget">
+                <h3>Chủ Đề Nổi Bật</h3>
+                <ul class="widget-list">
+                    <li><a href="#">&bull; Cấu trúc Semantic HTML5</a></li>
+                    <li><a href="#">&bull; Flexbox vs CSS Grid</a></li>
+                    <li><a href="#">&bull; Tối ưu Responsive Web Design</a></li>
+                    <li><a href="#">&bull; UI/UX Best Practices</a></li>
+                </ul>
             </div>
-            <!-- Card 2 -->
-            <div class="card">
-                <img src="images/service2.jpg" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80'" alt="SEO & Marketing">
-                <h3>SEO &amp; Marketing</h3>
-                <p>• Giúp website của bạn đạt thứ hạng cao trên công cụ tìm kiếm.</p>
+            <div class="sidebar-widget info-box">
+                <h3>Về Dự Án</h3>
+                <p>Website template mẫu phục vụ bài thực hành phân tích và tái hiện bố cục chuẩn giao diện web.</p>
             </div>
-            <!-- Card 3 -->
-            <div class="card">
-                <img src="images/service3.jpg" onerror="this.src='https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=600&q=80'" alt="Hỗ trợ 24/7">
-                <h3>Hỗ trợ 24/7</h3>
-                <p>• Đội ngũ hỗ trợ luôn sẵn sàng giúp bạn giải quyết mọi vấn đề.</p>
-            </div>
-        </div>
-    </section>
+        </aside>
+    </main>
 
-    <!-- Footer với 2 cột (Bản quyền + Mạng xã hội) -->
+    <!-- 4. Footer: Chứa thông tin bản quyền -->
     <footer class="footer" id="contact">
-        <div class="footer-left">
-            <p>• &copy; 2026 Creative Web. All rights reserved.</p>
-        </div>
-        <div class="footer-right">
-            <p>• Theo dõi chúng tôi:</p>
-            <p>• Facebook | Twitter | LinkedIn</p>
+        <div class="footer-inner">
+            <p>&copy; 2026 TechPulse Magazine. Tất cả các quyền được bảo lưu.</p>
+            <p class="footer-links">
+                <a href="#">Chính sách bảo mật</a> | 
+                <a href="#">Điều khoản sử dụng</a> | 
+                <a href="#">Sơ đồ trang</a>
+            </p>
         </div>
     </footer>
 
