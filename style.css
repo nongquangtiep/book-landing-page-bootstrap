@@ -7,16 +7,37 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #1e293b;
-    line-height: 1.6;
+    background-color: #f1f5f9;
 }
 
-/* Tinh chỉnh đường bo góc của các thẻ Card */
-.card {
-    border-radius: 8px;
+.register-card {
+    border-radius: 12px;
+    background-color: #ffffff;
 }
 
-/* Hiệu ứng di chuột cho liên kết sidebar */
-aside a:hover {
-    color: #0d6efd !important;
-    text-decoration: underline !important;
+.form-label {
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.btn-primary:active {
+    transform: scale(0.99);
 }
