@@ -1,0 +1,74 @@
+/* Tối ưu hiệu ứng cuộn trang mượt mà */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #334155;
+}
+
+/* Phần Overview nền gradient */
+.overview-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+
+/* Hiệu ứng bìa sách 3D */
+.book-mockup {
+  max-height: 480px;
+  transform: perspective(1000px) rotateY(-12deg) rotateX(4deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.book-mockup:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Khối tính năng Feature Card */
+.feature-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 12px;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+}
+
+/* Ảnh tác giả */
+.author-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bảng giá */
+.popular-card {
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+/* Khối đánh giá */
+.review-card {
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+}
