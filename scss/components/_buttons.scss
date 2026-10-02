@@ -1,0 +1,4 @@
+// Định dạng Component Button
+.button {
+  @include button-style($primary-color);
+}
