@@ -3,55 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hướng Dẫn Tạo Fixed Header &amp; Fixed Footer</title>
-    <!-- Nhúng file CSS ngoài -->
+    <title>Thực Hành Tạo Menu Dọc Dropdown</title>
+    <!-- Nhúng file CSS tùy chỉnh bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. Fixed Header / Navbar -->
-    <header class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </header>
+    <main class="wrapper">
+        <header class="page-header">
+            <h1>Menu Điều Hướng Dọc (Vertical Dropdown Menu)</h1>
+            <p>Di chuột vào các mục có mũi tên (như <em>Khóa học</em>) để xem menu con bung sang phải.</p>
+        </header>
 
-    <!-- 2. Main Content (Chiều cao lớn để kiểm tra hiệu ứng cuộn trang) -->
-    <main class="main" id="home">
-        <h1>Fixed Top Menu &amp; Bottom Footer</h1>
-        <h2>Scroll this page to see the effect</h2>
-        <h3>The navigation bar will stay at the top and footer at the bottom while scrolling</h3>
-
-        <div class="content-block">
-            <p>
-                Thuộc tính <code>position: fixed</code> giúp phần tử tách khỏi luồng thông thường của tài liệu và được định vị tương đối theo khung nhìn (viewport) của trình duyệt. Dù người dùng có cuộn trang lên hoặc xuống, thanh điều hướng vẫn giữ nguyên vị trí.
-            </p>
-            <p>
-                Để nội dung của phần <code>.main</code> không bị đè lấp bên dưới fixed header và fixed footer, chúng ta cần thiết lập khoảng đệm trên (<code>padding-top</code> hoặc <code>margin-top</code>) và khoảng đệm dưới (<code>padding-bottom</code> hoặc <code>margin-bottom</code>) phù hợp với chiều cao của hai thanh cố định này.
-            </p>
+        <!-- Khung chứa menu dọc -->
+        <div id="menu">
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li class="has-submenu">
+                    <a href="#courses">Khóa học &raquo;</a>
+                    <!-- Danh sách con cấp 2 -->
+                    <ul>
+                        <li><a href="#html">HTML &amp; CSS</a></li>
+                        <li><a href="#bootstrap">Bootstrap 5</a></li>
+                        <li><a href="#javascript">JavaScript</a></li>
+                        <li><a href="#react">ReactJS</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#services">Dịch vụ &raquo;</a>
+                    <!-- Danh sách con cấp 2 -->
+                    <ul>
+                        <li><a href="#web-design">Thiết kế Web</a></li>
+                        <li><a href="#seo">Tối ưu SEO</a></li>
+                        <li><a href="#hosting">Hosting &amp; Domain</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
         </div>
-
-        <section id="news" class="section-box">
-            <h2>Tin Tức (News Section)</h2>
-            <p>Nội dung thử nghiệm cuộn trang: Khi bạn cuộn qua vùng này, thanh Navbar phía trên và Footer phía dưới vẫn luôn hiển thị cố định trên màn hình.</p>
-        </section>
-
-        <section id="contact" class="section-box">
-            <h2>Liên Hệ (Contact Section)</h2>
-            <p>Email: contact@example.com | Hotline: 0988 123 456</p>
-        </section>
-
-        <section id="about" class="section-box">
-            <h2>Về Chúng Tôi (About Section)</h2>
-            <p>Trang thực hành thiết kế bố cục cố định giao diện web với HTML5 &amp; CSS3 cơ bản.</p>
-        </section>
     </main>
-
-    <!-- 3. Fixed Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 MyWebsite. All rights reserved. Fixed Header &amp; Footer Layout.</p>
-    </footer>
 
 </body>
 </html>
