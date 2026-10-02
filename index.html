@@ -3,35 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vịnh Hạ Long - Kỳ quan Thiên nhiên</title>
+    <title>Hướng Dẫn Tạo Fixed Header &amp; Fixed Footer</title>
+    <!-- Nhúng file CSS ngoài -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Tiêu đề chính sử dụng thẻ <h1> -->
-    <h1>Vịnh Hạ Long - Kỳ quan Thiên nhiên Thế giới</h1>
+    <!-- 1. Fixed Header / Navbar -->
+    <header class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </header>
 
-    <!-- Đoạn văn bản thứ nhất sử dụng thẻ <p> -->
-    <p>
-        Vịnh Hạ Long, nằm ở tỉnh Quảng Ninh, Việt Nam, là một trong những điểm đến du lịch nổi tiếng nhất của đất nước. Với hàng nghìn hòn đảo đá vôi và các đảo nhỏ hình thành từ hàng triệu năm, Vịnh Hạ Long tạo nên một cảnh quan ngoạn mục và độc đáo.
-    </p>
+    <!-- 2. Main Content (Chiều cao lớn để kiểm tra hiệu ứng cuộn trang) -->
+    <main class="main" id="home">
+        <h1>Fixed Top Menu &amp; Bottom Footer</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h3>The navigation bar will stay at the top and footer at the bottom while scrolling</h3>
 
-    <!-- Chèn hình ảnh minh họa bằng thẻ <img> kèm thuộc tính src, alt, width -->
-    <img 
-        src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80" 
-        alt="Toàn cảnh Vịnh Hạ Long với nhiều hòn đảo đá vôi" 
-        width="600"
-    >
+        <div class="content-block">
+            <p>
+                Thuộc tính <code>position: fixed</code> giúp phần tử tách khỏi luồng thông thường của tài liệu và được định vị tương đối theo khung nhìn (viewport) của trình duyệt. Dù người dùng có cuộn trang lên hoặc xuống, thanh điều hướng vẫn giữ nguyên vị trí.
+            </p>
+            <p>
+                Để nội dung của phần <code>.main</code> không bị đè lấp bên dưới fixed header và fixed footer, chúng ta cần thiết lập khoảng đệm trên (<code>padding-top</code> hoặc <code>margin-top</code>) và khoảng đệm dưới (<code>padding-bottom</code> hoặc <code>margin-bottom</code>) phù hợp với chiều cao của hai thanh cố định này.
+            </p>
+        </div>
 
-    <!-- Đoạn văn bản thứ hai sử dụng thẻ <p> -->
-    <p>
-        Vịnh Hạ Long đã được UNESCO công nhận là Di sản Thế giới vào năm 1994 và 2000. Nơi đây không chỉ nổi tiếng bởi vẻ đẹp tự nhiên mà còn bởi giá trị địa chất, địa mạo và đa dạng sinh học phong phú. Du khách đến đây có thể tham gia các hoạt động như chèo thuyền kayak, thăm hang động, hoặc đơn giản là ngắm cảnh từ du thuyền.
-    </p>
+        <section id="news" class="section-box">
+            <h2>Tin Tức (News Section)</h2>
+            <p>Nội dung thử nghiệm cuộn trang: Khi bạn cuộn qua vùng này, thanh Navbar phía trên và Footer phía dưới vẫn luôn hiển thị cố định trên màn hình.</p>
+        </section>
 
-    <!-- Liên kết chuyển hướng bằng thẻ <a> -->
-    <p>
-        Tìm hiểu thêm về Vịnh Hạ Long trên 
-        <a href="https://vi.wikipedia.org/wiki/V%E1%BB%8Bnh_H%E1%BA%A1_Long" target="_blank" rel="noopener noreferrer">Wikipedia</a>.
-    </p>
+        <section id="contact" class="section-box">
+            <h2>Liên Hệ (Contact Section)</h2>
+            <p>Email: contact@example.com | Hotline: 0988 123 456</p>
+        </section>
+
+        <section id="about" class="section-box">
+            <h2>Về Chúng Tôi (About Section)</h2>
+            <p>Trang thực hành thiết kế bố cục cố định giao diện web với HTML5 &amp; CSS3 cơ bản.</p>
+        </section>
+    </main>
+
+    <!-- 3. Fixed Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 MyWebsite. All rights reserved. Fixed Header &amp; Footer Layout.</p>
+    </footer>
 
 </body>
 </html>
