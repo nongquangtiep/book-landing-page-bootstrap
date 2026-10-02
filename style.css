@@ -8,48 +8,45 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f8fafc;
     color: #1e293b;
-    padding: 30px 15px;
+    padding: 40px 15px;
     line-height: 1.6;
 }
 
-.page-header {
+.header {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.page-header h1 {
+.header h1 {
     font-size: 26px;
     color: #0f172a;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
-.page-header p {
+.header p {
     color: #64748b;
     font-size: 15px;
 }
 
-.demo-wrapper {
+.wrapper {
     max-width: 900px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
 }
 
-.demo-card {
+.demo-box {
     background-color: #ffffff;
     padding: 24px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-.demo-card h2 {
-    font-size: 18px;
+.demo-box h2 {
+    font-size: 17px;
     color: #334155;
     margin-bottom: 16px;
 }
 
-.demo-card code {
+.demo-box code {
     background-color: #e2e8f0;
     padding: 2px 6px;
     border-radius: 4px;
@@ -57,102 +54,36 @@ body {
     font-size: 14px;
 }
 
-/* Base Flex Item */
+/* Vùng chứa Flex Container */
+.flex-container {
+    display: flex;
+    gap: 12px;
+    background-color: #f1f5f9;
+    padding: 16px;
+    border-radius: 6px;
+    border: 2px solid #cbd5e1;
+    min-height: 120px;
+}
+
+/* 4 div thông thường có flex-grow: 1 */
 .item {
-    padding: 20px;
+    flex-grow: 1;
+    background-color: lightblue;
+    color: #0369a1;
+    padding: 25px 10px;
     text-align: center;
     font-weight: bold;
     border-radius: 6px;
-}
-
-/* =========================================
-   1. Ví dụ 1: flex-basis với đơn vị px
-   ========================================= */
-.container-px {
-    display: flex;
-    gap: 10px;
-    background-color: #f1f5f9;
-    padding: 15px;
-    border-radius: 6px;
-}
-
-.container-px .item {
-    background-color: lightblue;
-    color: #0369a1;
-}
-
-.item1-1 { flex-basis: 200px; }
-.item1-2 { flex-basis: 100px; }
-.item1-3 { flex-basis: 150px; }
-
-/* =========================================
-   2. Ví dụ 2: flex-basis với flex-direction: column
-   ========================================= */
-.container-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 350px;
-    background-color: #f1f5f9;
-    padding: 15px;
-    border-radius: 6px;
-}
-
-.item-col {
-    flex-basis: 100px;
-    background-color: lightgreen;
-    color: #166534;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease;
 }
 
-/* =========================================
-   3. Ví dụ 3: flex-basis với %
-   ========================================= */
-.container-percent {
-    display: flex;
-    gap: 10px;
-    background-color: #f1f5f9;
-    padding: 15px;
-    border-radius: 6px;
-}
-
-.item-pct {
-    flex-basis: calc(50% - 5px); /* Trừ đi một nửa khoảng gap 10px để không rớt hàng */
-    background-color: lightcoral;
-    color: #7f1d1d;
-}
-
-/* =========================================
-   4. Ví dụ 4: Kết hợp flex-basis với flex-grow
-   ========================================= */
-.container-grow {
-    display: flex;
-    width: 100%;
-    max-width: 650px;
-    gap: 10px;
-    background-color: #f1f5f9;
-    padding: 15px;
-    border-radius: 6px;
-}
-
-.container-grow .item {
-    background-color: #fed7aa;
-    color: #9a3412;
-}
-
-.item-grow-1 {
-    flex-basis: 100px;
-    flex-grow: 1;
-}
-
-.item-grow-2 {
-    flex-basis: 100px;
-    flex-grow: 2; /* Nhận gấp đôi phần không gian còn trống */
-}
-
-.item-grow-3 {
-    flex-basis: 100px;
-    flex-grow: 1;
+/* Div thứ 2 được áp dụng flex-grow lớn hơn để mở rộng vượt trội */
+.item-grow {
+    flex-grow: 3;
+    background-color: #38bdf8;
+    color: #082f49;
+    border: 2px solid #0284c7;
 }
