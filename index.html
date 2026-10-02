@@ -3,61 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive CSS Grid Layout</title>
+    <title>Thực hành CSS Flexbox - flex-wrap property</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="grid-container">
-        <!-- 1. Header -->
-        <header class="header">
-            <h1>Cổng Thông Tin Công Nghệ</h1>
-            <p>Bố cục trang web hiện đại với CSS Grid & Responsive Design</p>
-        </header>
+    <header class="header">
+        <h1>Thực Hành: Thuộc Tính flex-wrap Trong Flexbox</h1>
+        <p>Quan sát sự thay đổi vị trí dòng của các Flex Item theo từng giá trị</p>
+    </header>
 
-        <!-- 2. Navigation -->
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Bài viết</a></li>
-                <li><a href="#">Khóa học</a></li>
-                <li><a href="#">Tài nguyên</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </nav>
-
-        <!-- 3. Main Content -->
-        <main class="content">
-            <article>
-                <h2>Tối ưu hóa bố cục bằng CSS Grid Layout</h2>
-                <p class="meta">Đăng ngày 02/10/2026 bởi CodeGym Developer</p>
-                <p>CSS Grid là công cụ dựng giao diện 2 chiều (hàng và cột) mạnh mẽ nhất trong CSS hiện đại. Nhờ vào <code>grid-template-areas</code>, việc cấu trúc các khối nội dung lớn trở nên trực quan và dễ quản lý hơn rất nhiều.</p>
-                <p>Khi kết hợp với Media Queries, chúng ta chỉ cần định nghĩa lại vùng hiển thị của từng phần tử mà không cần thay đổi cấu trúc mã nguồn HTML.</p>
-            </article>
-        </main>
-
-        <!-- 4. Sidebar -->
-        <aside class="sidebar">
-            <div class="widget">
-                <h3>Tin nổi bật</h3>
-                <ul>
-                    <li><a href="#">Lộ trình Frontend 2026</a></li>
-                    <li><a href="#">Kỹ thuật Grid vs Flexbox</a></li>
-                    <li><a href="#">Chuẩn SEO Semantic Tags</a></li>
-                </ul>
+    <main class="wrapper">
+        <!-- 1. flex-wrap: wrap -->
+        <section class="demo-box">
+            <h2>1. <code>flex-wrap: wrap;</code> (Tự động xuống dòng từ trên xuống dưới)</h2>
+            <div class="container wrap">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+                <div class="item">Item 6</div>
             </div>
-            <div class="widget banner">
-                <h3>Quảng cáo</h3>
-                <p>Khóa học Lập trình Web Fullstack chất lượng cao tại CodeGym.</p>
-            </div>
-        </aside>
+        </section>
 
-        <!-- 5. Footer -->
-        <footer class="footer">
-            <p>&copy; 2026 Responsive CSS Grid Practice. Tất cả các quyền được bảo lưu.</p>
-        </footer>
-    </div>
+        <!-- 2. flex-wrap: nowrap -->
+        <section class="demo-box">
+            <h2>2. <code>flex-wrap: nowrap;</code> (Mặc định - Cố định trên 1 dòng, item tự co lại)</h2>
+            <div class="container nowrap">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+                <div class="item">Item 6</div>
+            </div>
+        </section>
+
+        <!-- 3. flex-wrap: wrap-reverse -->
+        <section class="demo-box">
+            <h2>3. <code>flex-wrap: wrap-reverse;</code> (Xuống dòng nhưng đảo ngược trục Cross Axis từ dưới lên)</h2>
+            <div class="container wrap-reverse">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+                <div class="item">Item 6</div>
+            </div>
+        </section>
+
+        <!-- 4. flex-wrap: initial -->
+        <section class="demo-box">
+            <h2>4. <code>flex-wrap: initial;</code> (Đưa về giá trị mặc định của CSS: nowrap)</h2>
+            <div class="container initial">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+                <div class="item">Item 6</div>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>

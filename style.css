@@ -6,195 +6,114 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f1f5f9;
+    background-color: #f8fafc;
     color: #1e293b;
+    padding: 30px 15px;
     line-height: 1.6;
 }
 
-/* Lưới Grid chính (Mặc định cho Desktop) */
-.grid-container {
-    display: grid;
-    min-height: 100vh;
-    grid-template-columns: 3fr 1fr; /* Nội dung chính 3 phần, Sidebar 1 phần */
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas:
-        "header  header"
-        "nav     nav"
-        "content sidebar"
-        "footer  footer";
-    gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px;
-}
-
-/* 1. Header */
 .header {
-    grid-area: header;
-    background-color: #1e3a8a;
-    color: #ffffff;
     text-align: center;
-    padding: 25px 20px;
-    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
 .header h1 {
     font-size: 26px;
+    color: #0f172a;
     margin-bottom: 6px;
 }
 
 .header p {
-    font-size: 14px;
-    color: #cbd5e1;
-}
-
-/* 2. Navigation */
-.nav {
-    grid-area: nav;
-    background-color: #2563eb;
-    padding: 10px 20px;
-    border-radius: 6px;
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    padding: 6px 12px;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-}
-
-.nav ul li a:hover {
-    background-color: #1d4ed8;
-}
-
-/* 3. Main Content */
-.content {
-    grid-area: content;
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.content h2 {
-    font-size: 22px;
-    color: #0f172a;
-    margin-bottom: 8px;
-}
-
-.content .meta {
-    font-size: 13px;
     color: #64748b;
+    font-size: 15px;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.demo-box {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.demo-box h2 {
+    font-size: 18px;
+    color: #334155;
     margin-bottom: 16px;
 }
 
-.content p {
-    margin-bottom: 12px;
-    color: #334155;
-}
-
-.content code {
+.demo-box code {
     background-color: #e2e8f0;
     padding: 2px 6px;
     border-radius: 4px;
+    color: #0f172a;
     font-size: 14px;
 }
 
-/* 4. Sidebar */
-.sidebar {
-    grid-area: sidebar;
+/* Định dạng chung cho Flex Container */
+.container {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.widget {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.widget h3 {
-    font-size: 16px;
-    color: #1e3a8a;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #2563eb;
-    padding-bottom: 4px;
-}
-
-.widget ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-.widget ul li {
-    margin-bottom: 6px;
-}
-
-.widget ul li a {
-    color: #2563eb;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.widget ul li a:hover {
-    text-decoration: underline;
-}
-
-.banner {
-    background-color: #eff6ff;
-    border: 1px dashed #60a5fa;
-}
-
-.banner p {
-    font-size: 14px;
-    color: #1e40af;
-}
-
-/* 5. Footer */
-.footer {
-    grid-area: footer;
-    background-color: #0f172a;
-    color: #94a3b8;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
+    width: 600px;
+    min-height: 200px;
+    gap: 10px;
+    border: 2px solid #0f172a;
     border-radius: 6px;
+    padding: 10px;
+    background-color: #f1f5f9;
 }
 
-/* ✅ Responsive Media Query cho Màn hình Mobile (<= 768px) */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Chuyển hoàn toàn về 1 cột dọc */
-        grid-template-areas:
-            "header"
-            "nav"
-            "content"
-            "sidebar"
-            "footer";
-        gap: 12px;
-        padding: 10px;
-    }
+/* Định dạng chung cho Flex Item */
+.item {
+    width: 180px;
+    height: 80px;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
+/* 1. Giá trị wrap */
+.wrap {
+    flex-wrap: wrap;
+}
+.wrap .item {
+    background-color: lightblue;
+    color: #0369a1;
+}
 
-    .header h1 {
-        font-size: 22px;
-    }
+/* 2. Giá trị nowrap */
+.nowrap {
+    flex-wrap: nowrap;
+}
+.nowrap .item {
+    background-color: lightgreen;
+    color: #166534;
+}
+
+/* 3. Giá trị wrap-reverse */
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+.wrap-reverse .item {
+    background-color: lightcoral;
+    color: #7f1d1d;
+}
+
+/* 4. Giá trị initial (tương đương nowrap) */
+.initial {
+    flex-wrap: initial;
+}
+.initial .item {
+    background-color: #fef08a;
+    color: #854d0e;
 }
