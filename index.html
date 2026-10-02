@@ -3,64 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Flexbox Layout</title>
-    <!-- Nhúng file CSS ngoài -->
+    <title>Bootstrap Navbar Practice</title>
+    <!-- Nhúng CSS Bootstrap 5 qua CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Nhúng file CSS tùy chỉnh ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="layout-wrapper">
-        <!-- 1. Header -->
-        <header class="header">
-            <h1>Cổng Thông Tin Công Nghệ</h1>
-            <p>Xây dựng giao diện responsive hiện đại với CSS Flexbox</p>
-        </header>
+    <!-- Header Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+            <div class="container-fluid px-4">
+                <!-- Logo / Thương hiệu -->
+                <a class="navbar-brand fw-bold text-info" href="#">MyWebsite</a>
 
-        <!-- 2. Navigation -->
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Bài viết</a></li>
-                <li><a href="#">Dự án</a></li>
-                <li><a href="#">Tài liệu</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </nav>
+                <!-- Nút Hamburger Toggler hiển thị trên Mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Thân giữa: Flexbox phân chia Content & Sidebar -->
-        <div class="body-container">
-            <!-- 3. Main Content (flex: 3) -->
-            <main class="content">
-                <article>
-                    <h2>Làm chủ bố cục giao diện với CSS Flexbox</h2>
-                    <p class="meta">Đăng ngày 02/10/2026 bởi CodeGym Developer</p>
-                    <p>CSS Flexbox (Flexible Box Layout) là một mô hình dàn trang một chiều cực kỳ mạnh mẽ, giúp tối ưu hóa việc căn chỉnh và phân bổ không gian giữa các phần tử trong một khung chứa, ngay cả khi kích thước của chúng chưa xác định trước.</p>
-                    <p>Bằng cách kết hợp cấu trúc Flexbox lồng nhau (`flex-direction: column` ở khung bọc ngoài và `flex-direction: row` ở phần thân) cùng với Media Queries, trang web sẽ co giãn mượt mà và tương thích tốt trên mọi kích thước màn hình.</p>
-                </article>
-            </main>
-
-            <!-- 4. Sidebar (flex: 1) -->
-            <aside class="sidebar">
-                <div class="card">
-                    <h3>Chủ đề hot</h3>
-                    <ul>
-                        <li><a href="#">Lộ trình Frontend 2026</a></li>
-                        <li><a href="#">Bí quyết phối hợp Flexbox & Grid</a></li>
-                        <li><a href="#">Tối ưu trải nghiệm Mobile-First</a></li>
+                <!-- Danh sách Menu điều hướng -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <!-- Mục Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Web Design</a></li>
+                                <li><a class="dropdown-item" href="#">SEO</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Software Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
                     </ul>
-                </div>
-                <div class="card promo">
-                    <h3>Khóa học đề xuất</h3>
-                    <p>Tham gia chương trình đào tạo Fullstack Web Developer tại CodeGym để bứt phá kỹ năng lập trình.</p>
-                </div>
-            </aside>
-        </div>
 
-        <!-- 5. Footer -->
-        <footer class="footer">
-            <p>&copy; 2026 Responsive Flexbox Layout. Tất cả các quyền được bảo lưu.</p>
-        </footer>
-    </div>
+                    <!-- Khung tìm kiếm phụ trợ -->
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 form-control-sm" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                        <button class="btn btn-outline-info btn-sm" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Khu vực nội dung kiểm tra -->
+    <main class="container py-5 text-center">
+        <h1 class="display-6 fw-bold mb-3">Thực Hành Tạo Thanh Điều Hướng (Navbar) Với Bootstrap 5</h1>
+        <p class="lead text-secondary">
+            Thanh navbar trên đã được tích hợp đầy đủ tính năng: menu thả xuống (Dropdown) và tự động chuyển thành nút hamburger trên màn hình điện thoại.
+        </p>
+    </main>
+
+    <!-- Nhúng file JS bundle của Bootstrap (chứa Popper.js phục vụ Dropdown và Collapse) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
