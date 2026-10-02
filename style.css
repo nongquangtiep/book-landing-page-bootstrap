@@ -7,30 +7,35 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #1e293b;
-    line-height: 1.6;
+    background-color: #f1f5f9;
 }
 
-/* Chiều cao đồng bộ cho ảnh trong Carousel */
-.carousel-img {
-    height: 400px;
-    object-fit: cover;
+/* Tinh chỉnh Carousel phủ kín chiều cao cột */
+#serviceCarousel,
+#serviceCarousel .carousel-inner,
+#serviceCarousel .carousel-item {
+    min-height: 520px;
 }
 
-/* Lớp nền mờ cho chú thích slide */
-.bg-dark-overlay {
-    background-color: rgba(15, 23, 42, 0.7);
-    max-width: 550px;
-    margin: 0 auto;
-    backdrop-filter: blur(4px);
+/* Đổ bóng chú thích Carousel trên nền ảnh */
+.carousel-caption {
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.2));
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-/* Hiệu ứng focus cho form */
+/* Tinh chỉnh ô input và input-group */
+.input-group-text {
+    border-color: #dee2e6;
+}
+
 .form-control:focus {
     border-color: #0d6efd;
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.2);
 }
 
-/* Hiệu ứng rê chuột nút bấm */
+/* Nút Submit */
 .btn-primary {
     transition: transform 0.15s ease, background-color 0.2s ease;
 }
