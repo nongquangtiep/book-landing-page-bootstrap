@@ -1,0 +1,17 @@
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid $border-color;
+  padding: 24px 0;
+  margin-bottom: 30px;
+  text-align: center;
+
+  .header-title {
+    font-size: 28px;
+    color: $primary-color;
+    margin-bottom: 6px;
+  }
+
+  .header-subtitle {
+    font-size: 15px;
+  }
+}

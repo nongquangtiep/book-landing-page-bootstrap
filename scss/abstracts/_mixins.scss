@@ -1,25 +1,23 @@
-// Khai báo mixins tái sử dụng
-@mixin button-style($bg-color) {
-  background-color: $bg-color;
-  color: #ffffff;
-  padding: $padding-standard;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-
-  &:hover {
-    background-color: darken($bg-color, 8%);
-    transform: translateY(-1px);
+// Mixin xử lý Media Query linh hoạt
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: #{$breakpoint-mobile}) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: #{$breakpoint-tablet}) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (max-width: #{$breakpoint-desktop}) { @content; }
   }
 }
 
-@mixin box-style {
-  background-color: $card-bg;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: $box-shadow-default;
+// Mixin cho Flexbox căn giữa
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+// Mixin đổ bóng
+@mixin card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
