@@ -3,38 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành CSS Flexbox - flex-flow Property</title>
+    <title>Flexbox Layout</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <h1>Thực Hành: Thuộc Tính flex-flow Trong Flexbox</h1>
-        <p>Viết tắt kết hợp giữa flex-direction và flex-wrap</p>
-    </header>
+    <div class="container">
+        <!-- 1. Header -->
+        <header class="header">
+            <h1>Cổng Thông Tin Công Nghệ</h1>
+        </header>
 
-    <main class="wrapper">
-        <!-- VÍ DỤ 1: row nowrap -->
-        <section class="demo-box">
-            <h2>1. <code>flex-flow: row nowrap;</code> (Sắp xếp từ trái sang phải, không xuống dòng)</h2>
-            <div class="container container-1">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-            </div>
-        </section>
+        <!-- 2. Navigation -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Bài viết</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Tài nguyên</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
 
-        <!-- VÍ DỤ 2: row-reverse nowrap -->
-        <section class="demo-box">
-            <h2>2. <code>flex-flow: row-reverse nowrap;</code> (Sắp xếp từ phải sang trái, không xuống dòng)</h2>
-            <div class="container container-2">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-            </div>
-        </section>
-    </main>
+        <!-- Khung chứa thân chính: Flexbox lồng nhau -->
+        <div class="main-container">
+            <!-- 3. Main Content (flex: 3) -->
+            <main class="content">
+                <h2>Nội dung chính (Main Content)</h2>
+                <p>Khối này sử dụng thuộc tính <code>flex: 3</code> để chiếm 3/4 không gian hàng ngang trên màn hình Desktop. Flexbox giúp việc co giãn và căn chỉnh nội dung trở nên cực kỳ linh hoạt mà không cần tính toán phần trăm float phức tạp.</p>
+                <p>Khi thu nhỏ màn hình xuống dưới 768px (chế độ điện thoại), trục chính của <code>.main-container</code> chuyển thành cột dọc, đưa phần Sidebar nằm gọn gàng bên dưới bài viết này.</p>
+            </main>
+
+            <!-- 4. Sidebar (flex: 1) -->
+            <aside class="sidebar">
+                <h3>Thanh bên (Sidebar)</h3>
+                <div class="widget">
+                    <h4>Tin tức nhanh</h4>
+                    <p>Lộ trình học Lập trình Web Frontend hiện đại tại CodeGym.</p>
+                </div>
+                <div class="widget">
+                    <h4>Quảng cáo</h4>
+                    <p>Đăng ký khóa học Fullstack thực chiến ngay hôm nay.</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 5. Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Flexbox Responsive Layout. Tất cả các quyền được bảo lưu.</p>
+        </footer>
+    </div>
 
 </body>
 </html>

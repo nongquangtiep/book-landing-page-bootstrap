@@ -6,92 +6,152 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8fafc;
     color: #1e293b;
-    padding: 40px 15px;
     line-height: 1.6;
+    background-color: #f8fafc;
 }
 
+/* Khung ngoài cùng: Flexbox trục dọc phủ trọn chiều cao màn hình */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 1. Header */
 .header {
+    background-color: #1e3a8a;
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 30px;
+    padding: 24px 20px;
 }
 
 .header h1 {
-    font-size: 26px;
-    color: #0f172a;
-    margin-bottom: 8px;
+    font-size: 24px;
 }
 
-.header p {
-    color: #64748b;
-    font-size: 15px;
+/* 2. Navigation */
+.nav {
+    background-color: #2563eb;
+    padding: 12px 20px;
 }
 
-.wrapper {
-    max-width: 850px;
-    margin: 0 auto;
+.nav ul {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.demo-box {
+.nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.nav ul li a:hover {
+    background-color: #1d4ed8;
+}
+
+/* Khung giữa: Flexbox trục ngang chứa Content & Sidebar */
+.main-container {
+    display: flex;
+    flex: 1; /* Chiếm toàn bộ chiều cao còn trống giữa Header và Footer */
+}
+
+/* 3. Main Content: chiếm 3 phần */
+.content {
+    flex: 3;
+    padding: 30px;
     background-color: #ffffff;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-.demo-box h2 {
-    font-size: 17px;
+.content h2 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.content p {
+    margin-bottom: 14px;
     color: #334155;
-    margin-bottom: 16px;
 }
 
-.demo-box code {
+.content code {
     background-color: #e2e8f0;
     padding: 2px 6px;
     border-radius: 4px;
-    color: #0f172a;
     font-size: 14px;
 }
 
-/* Định dạng cơ sở chung cho Flex Container */
-.container {
-    display: flex;
-    background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #e2e8f0;
+/* 4. Sidebar: chiếm 1 phần */
+.sidebar {
+    flex: 1;
+    background-color: #f1f5f9;
+    padding: 25px;
+    border-left: 1px solid #e2e8f0;
 }
 
-/* Định dạng chung cho các phần tử con */
-.container > div {
-    color: white;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 50px;
-    font-weight: bold;
+.sidebar h3 {
     font-size: 18px;
-    border-radius: 4px;
+    color: #0f172a;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 6px;
 }
 
-/* 1. Ví dụ 1: row nowrap */
-.container-1 {
-    flex-flow: row nowrap;
+.widget {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    margin-bottom: 15px;
 }
 
-.container-1 > div {
-    background-color: #007bff;
+.widget h4 {
+    color: #2563eb;
+    margin-bottom: 6px;
+    font-size: 15px;
 }
 
-/* 2. Ví dụ 2: row-reverse nowrap */
-.container-2 {
-    flex-flow: row-reverse nowrap;
+.widget p {
+    font-size: 13px;
+    color: #64748b;
 }
 
-.container-2 > div {
-    background-color: #28a745;
+/* 5. Footer */
+.footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* ✅ Responsive Media Query cho Màn hình Mobile (<= 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Đổi trục ngang thành dọc */
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .content, 
+    .sidebar {
+        padding: 20px;
+    }
 }
