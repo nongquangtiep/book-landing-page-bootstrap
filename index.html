@@ -3,51 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực Hành Tạo Menu Ngang Dropdown</title>
+    <title>Trang Chủ Giản Lược - Fixed Header &amp; Flexbox</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="wrapper">
-        <header class="header">
-            <h1>Menu Điều Hướng Hàng Ngang (Horizontal Dropdown Menu)</h1>
-            <p>Di chuột vào mục <strong>Khóa học</strong> hoặc <strong>Dịch vụ</strong> để xem trình đơn con thả xuống.</p>
-        </header>
-
-        <!-- Khung chứa menu ngang -->
-        <nav id="menu">
+    <!-- Header cố định trên đầu trang -->
+    <header class="main-header">
+        <h1>Tiêu đề Trang Web</h1>
+        <nav>
             <ul>
-                <li><a href="#home">Trang chủ</a></li>
-                <li><a href="#about">Giới thiệu</a></li>
-                <li>
-                    <a href="#courses">Khóa học &#9662;</a>
-                    <!-- Menu con cấp 2 -->
-                    <ul>
-                        <li><a href="#html">HTML &amp; CSS</a></li>
-                        <li><a href="#bootstrap">Bootstrap 5</a></li>
-                        <li><a href="#javascript">JavaScript</a></li>
-                        <li><a href="#react">ReactJS</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#services">Dịch vụ &#9662;</a>
-                    <!-- Menu con cấp 2 -->
-                    <ul>
-                        <li><a href="#web-design">Thiết kế Web</a></li>
-                        <li><a href="#seo">Dịch vụ SEO</a></li>
-                        <li><a href="#hosting">Web Hosting</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact">Liên hệ</a></li>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Liên hệ</a></li>
             </ul>
         </nav>
+    </header>
 
-        <section class="content">
-            <h2>Nội Dung Trang Web</h2>
-            <p>Trình đơn hàng ngang được cấu hình với chiều cao và màu nền thống nhất, menu con được định vị tuyệt đối so với mục cha tương ứng để không làm xô lệch các phần tử nội dung bên dưới.</p>
-        </section>
-    </main>
+    <!-- Khung chứa bố cục 3 cột (Flexbox Container) -->
+    <div class="page-container">
+        <!-- Sidebar Trái -->
+        <aside class="sidebar left-sidebar">
+            <h3>Sidebar Trái</h3>
+            <ul>
+                <li><a href="#">&bull; Danh mục 1</a></li>
+                <li><a href="#">&bull; Danh mục 2</a></li>
+                <li><a href="#">&bull; Danh mục 3</a></li>
+            </ul>
+        </aside>
+
+        <!-- Khu vực nội dung chính -->
+        <main class="main-content">
+            <h2>Nội dung chính của trang</h2>
+            <p>
+                Đây là khu vực chứa nội dung quan trọng nhất của trang web. Bố cục được xử lý bằng <strong>Flexbox</strong> với thuộc tính <code>flex-grow: 1</code> giúp phần nội dung chính tự động co giãn và chiếm toàn bộ không gian còn lại giữa hai thanh sidebar.
+            </p>
+            <p>
+                Thanh header phía trên sử dụng <code>position: fixed</code> kèm <code>top: 0</code> và <code>z-index: 1000</code>, đảm bảo luôn nằm ở vị trí cao nhất trên màn hình và không bao giờ bị nội dung che khuất khi người dùng cuộn trang. Đồng thời, phần <code>body</code> được bù trừ bằng <code>padding-top: 70px</code> để tránh việc nội dung ban đầu bị chèn lấp bên dưới header.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+        </main>
+
+        <!-- Sidebar Phải -->
+        <aside class="sidebar right-sidebar">
+            <h3>Sidebar Phải</h3>
+            <p>Đây là sidebar phụ, dùng để hiển thị quảng cáo, tiện ích hoặc các bài viết liên quan.</p>
+        </aside>
+    </div>
 
 </body>
 </html>
