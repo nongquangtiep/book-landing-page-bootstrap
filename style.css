@@ -1,4 +1,4 @@
-/* 1. Thiết lập font chữ và reset căn lề */
+/* 1. Reset lề và thiết lập phông chữ cố định cho trang */
 * {
     margin: 0;
     padding: 0;
@@ -13,88 +13,122 @@ body {
 }
 
 .wrapper {
-    max-width: 800px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
-.page-header {
-    margin-bottom: 30px;
+.header {
+    margin-bottom: 25px;
 }
 
-.page-header h1 {
+.header h1 {
     font-size: 24px;
     color: #0f172a;
     margin-bottom: 8px;
 }
 
-.page-header p {
+.header p {
     font-size: 15px;
     color: #64748b;
 }
 
-/* 2. Định dạng khung chứa menu */
+/* 2. Thiết lập phân vùng cho thanh menu (#menu) */
 #menu {
-    width: 200px;
+    height: 45px;
+    background-color: #333333;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 #menu ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-/* 3. Định dạng từng mục (li) của menu */
-#menu ul li {
-    list-style: none;
-    position: relative;          /* Cho phép menu con căn chỉnh tương đối theo mục này */
-    width: 160px;
-    height: 40px;
-    line-height: 40px;           /* Căn giữa dòng văn bản theo chiều cao */
-    padding: 0 16px;
-    background-color: #1e293b;   /* Nền tối thanh lịch */
-    cursor: pointer;
-    border-bottom: 1px solid #334155;
+/* 3. Phần tử trong danh sách cấp 1: dàn hàng ngang và làm điểm tựa định vị */
+#menu > ul > li {
+    float: left;
+    position: relative; /* Điểm tựa tuyệt đối cho danh sách con cấp 2 */
+}
+
+/* 4. Định dạng liên kết trong trình đơn */
+#menu a {
+    display: block;
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
     transition: background-color 0.25s ease;
 }
 
-/* 4. Định dạng thẻ liên kết bên trong */
-#menu ul li a {
-    text-decoration: none;
+/* 5. Đổi màu nền (chuyển sang màu đỏ/nổi bật) khi đưa con trỏ chuột qua */
+#menu a:hover,
+#menu li:hover > a {
+    background-color: #dc2626; /* Màu đỏ nổi bật theo yêu cầu bài học */
     color: #ffffff;
-    display: block;
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
 }
 
-/* 5. Đổi màu nền khi rê chuột vào mục chọn */
-#menu ul li:hover {
-    background-color: #0284c7;   /* Chuyển sang xanh sáng khi hover */
+/* Bo góc cho mục đầu và cuối trên thanh ngang */
+#menu > ul > li:first-child > a {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
-/* 6. Định dạng danh sách con (Submenu) */
-#menu ul li ul {
-    position: absolute;          /* Định vị tuyệt đối cạnh danh sách cha */
-    top: 0;
-    left: 160px;                 /* Xuất hiện ngay sát lề phải của menu cha (độ rộng 160px) */
-    visibility: hidden;          /* Mặc định ẩn danh sách con */
-    opacity: 0;                  /* Tạo hiệu ứng chuyển cảnh mượt */
+/* 6. Định dạng vị trí hiển thị và ẩn menu con cấp 2 (#menu ul ul) */
+#menu ul ul {
+    position: absolute;
+    top: 45px;             /* Xuất hiện ngay sát mép dưới của mục cha */
+    left: 0;
+    width: 160px;
+    background-color: #222222;
+    visibility: hidden;    /* Ẩn mặc định để không che nội dung */
+    opacity: 0;
     transition: opacity 0.25s ease, visibility 0.25s ease;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    overflow: hidden;
+    z-index: 100;
 }
 
-/* 7. Hiển thị danh sách con khi rê chuột vào li cha tương ứng */
+/* Các mục con xếp theo chiều dọc */
+#menu ul ul li {
+    float: none;
+    width: 100%;
+}
+
+#menu ul ul a {
+    width: 100%;
+    text-align: left;
+    padding: 0 16px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    border-bottom: 1px solid #333333;
+}
+
+/* 7. Hiển thị menu con khi đưa chuột qua mục cha */
 #menu ul li:hover > ul {
-    visibility: visible;         /* Hiển thị danh sách con */
+    visibility: visible;
     opacity: 1;
 }
 
-/* Tùy chỉnh màu nền cho các mục con */
-#menu ul li ul li {
-    background-color: #0f172a;
-    border-bottom: 1px solid #1e293b;
+/* 8. Nội dung bên dưới */
+.content {
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
 }
 
-#menu ul li ul li:hover {
-    background-color: #0369a1;
+.content h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0f172a;
 }

@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực Hành Tạo Menu Dọc Dropdown</title>
-    <!-- Nhúng file CSS tùy chỉnh bên ngoài -->
+    <title>Thực Hành Tạo Menu Ngang Dropdown</title>
+    <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <main class="wrapper">
-        <header class="page-header">
-            <h1>Menu Điều Hướng Dọc (Vertical Dropdown Menu)</h1>
-            <p>Di chuột vào các mục có mũi tên (như <em>Khóa học</em>) để xem menu con bung sang phải.</p>
+        <header class="header">
+            <h1>Menu Điều Hướng Hàng Ngang (Horizontal Dropdown Menu)</h1>
+            <p>Di chuột vào mục <strong>Khóa học</strong> hoặc <strong>Dịch vụ</strong> để xem trình đơn con thả xuống.</p>
         </header>
 
-        <!-- Khung chứa menu dọc -->
-        <div id="menu">
+        <!-- Khung chứa menu ngang -->
+        <nav id="menu">
             <ul>
                 <li><a href="#home">Trang chủ</a></li>
                 <li><a href="#about">Giới thiệu</a></li>
-                <li class="has-submenu">
-                    <a href="#courses">Khóa học &raquo;</a>
-                    <!-- Danh sách con cấp 2 -->
+                <li>
+                    <a href="#courses">Khóa học &#9662;</a>
+                    <!-- Menu con cấp 2 -->
                     <ul>
                         <li><a href="#html">HTML &amp; CSS</a></li>
                         <li><a href="#bootstrap">Bootstrap 5</a></li>
@@ -30,18 +30,23 @@
                         <li><a href="#react">ReactJS</a></li>
                     </ul>
                 </li>
-                <li class="has-submenu">
-                    <a href="#services">Dịch vụ &raquo;</a>
-                    <!-- Danh sách con cấp 2 -->
+                <li>
+                    <a href="#services">Dịch vụ &#9662;</a>
+                    <!-- Menu con cấp 2 -->
                     <ul>
                         <li><a href="#web-design">Thiết kế Web</a></li>
-                        <li><a href="#seo">Tối ưu SEO</a></li>
-                        <li><a href="#hosting">Hosting &amp; Domain</a></li>
+                        <li><a href="#seo">Dịch vụ SEO</a></li>
+                        <li><a href="#hosting">Web Hosting</a></li>
                     </ul>
                 </li>
                 <li><a href="#contact">Liên hệ</a></li>
             </ul>
-        </div>
+        </nav>
+
+        <section class="content">
+            <h2>Nội Dung Trang Web</h2>
+            <p>Trình đơn hàng ngang được cấu hình với chiều cao và màu nền thống nhất, menu con được định vị tuyệt đối so với mục cha tương ứng để không làm xô lệch các phần tử nội dung bên dưới.</p>
+        </section>
     </main>
 
 </body>
