@@ -6,28 +6,38 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
     color: #1e293b;
     line-height: 1.6;
-    background-color: #f8fafc;
 }
 
-/* Khung ngoài cùng: Flexbox trục dọc phủ trọn chiều cao màn hình */
-.container {
+/* Khung bọc tổng thể: Flexbox trục dọc dàn trọn chiều cao màn hình */
+.layout-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* 1. Header */
 .header {
     background-color: #1e3a8a;
     color: #ffffff;
+    padding: 30px 20px;
     text-align: center;
-    padding: 24px 20px;
 }
 
 .header h1 {
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.header p {
+    font-size: 15px;
+    color: #cbd5e1;
 }
 
 /* 2. Navigation */
@@ -49,7 +59,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     font-size: 15px;
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 4px;
     transition: background-color 0.2s ease;
 }
@@ -58,23 +68,30 @@ body {
     background-color: #1d4ed8;
 }
 
-/* Khung giữa: Flexbox trục ngang chứa Content & Sidebar */
-.main-container {
+/* Thân giữa: Flexbox dàn ngang chia cột trên Desktop */
+.body-container {
     display: flex;
-    flex: 1; /* Chiếm toàn bộ chiều cao còn trống giữa Header và Footer */
+    flex: 1; /* Tự động phình to lấp đầy khoảng trống giữa Header và Footer */
+    gap: 20px;
+    padding: 25px;
 }
 
 /* 3. Main Content: chiếm 3 phần */
 .content {
     flex: 3;
-    padding: 30px;
-    background-color: #ffffff;
+    padding-right: 10px;
 }
 
 .content h2 {
-    font-size: 22px;
+    font-size: 24px;
     color: #0f172a;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+}
+
+.content .meta {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 18px;
 }
 
 .content p {
@@ -92,42 +109,59 @@ body {
 /* 4. Sidebar: chiếm 1 phần */
 .sidebar {
     flex: 1;
-    background-color: #f1f5f9;
-    padding: 25px;
-    border-left: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.sidebar h3 {
-    font-size: 18px;
-    color: #0f172a;
-    margin-bottom: 16px;
+.card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 17px;
+    color: #1e3a8a;
+    margin-bottom: 12px;
     border-bottom: 2px solid #2563eb;
     padding-bottom: 6px;
 }
 
-.widget {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 6px;
-    border: 1px solid #cbd5e1;
-    margin-bottom: 15px;
+.card ul {
+    list-style-type: square;
+    padding-left: 20px;
 }
 
-.widget h4 {
+.card ul li {
+    margin-bottom: 8px;
+}
+
+.card ul li a {
     color: #2563eb;
-    margin-bottom: 6px;
-    font-size: 15px;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-.widget p {
-    font-size: 13px;
-    color: #64748b;
+.card ul li a:hover {
+    text-decoration: underline;
+}
+
+.promo {
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+}
+
+.promo p {
+    font-size: 14px;
+    color: #1e40af;
 }
 
 /* 5. Footer */
 .footer {
     background-color: #0f172a;
-    color: #cbd5e1;
+    color: #94a3b8;
     text-align: center;
     padding: 20px;
     font-size: 14px;
@@ -135,13 +169,14 @@ body {
 
 /* ✅ Responsive Media Query cho Màn hình Mobile (<= 768px) */
 @media (max-width: 768px) {
-    .main-container {
-        flex-direction: column; /* Đổi trục ngang thành dọc */
+    .body-container {
+        flex-direction: column; /* Đổi trục chính từ ngang thành dọc */
+        padding: 15px;
+        gap: 20px;
     }
 
-    .sidebar {
-        border-left: none;
-        border-top: 1px solid #e2e8f0;
+    .content {
+        padding-right: 0;
     }
 
     .nav ul {
@@ -150,8 +185,11 @@ body {
         gap: 8px;
     }
 
-    .content, 
-    .sidebar {
-        padding: 20px;
+    .header {
+        padding: 20px 15px;
+    }
+
+    .header h1 {
+        font-size: 22px;
     }
 }

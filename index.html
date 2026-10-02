@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Layout</title>
+    <title>Responsive Flexbox Layout</title>
     <!-- Nhúng file CSS ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+    <div class="layout-wrapper">
         <!-- 1. Header -->
         <header class="header">
             <h1>Cổng Thông Tin Công Nghệ</h1>
+            <p>Xây dựng giao diện responsive hiện đại với CSS Flexbox</p>
         </header>
 
         <!-- 2. Navigation -->
@@ -20,38 +21,44 @@
             <ul>
                 <li><a href="#">Trang chủ</a></li>
                 <li><a href="#">Bài viết</a></li>
-                <li><a href="#">Khóa học</a></li>
-                <li><a href="#">Tài nguyên</a></li>
+                <li><a href="#">Dự án</a></li>
+                <li><a href="#">Tài liệu</a></li>
                 <li><a href="#">Liên hệ</a></li>
             </ul>
         </nav>
 
-        <!-- Khung chứa thân chính: Flexbox lồng nhau -->
-        <div class="main-container">
+        <!-- Thân giữa: Flexbox phân chia Content & Sidebar -->
+        <div class="body-container">
             <!-- 3. Main Content (flex: 3) -->
             <main class="content">
-                <h2>Nội dung chính (Main Content)</h2>
-                <p>Khối này sử dụng thuộc tính <code>flex: 3</code> để chiếm 3/4 không gian hàng ngang trên màn hình Desktop. Flexbox giúp việc co giãn và căn chỉnh nội dung trở nên cực kỳ linh hoạt mà không cần tính toán phần trăm float phức tạp.</p>
-                <p>Khi thu nhỏ màn hình xuống dưới 768px (chế độ điện thoại), trục chính của <code>.main-container</code> chuyển thành cột dọc, đưa phần Sidebar nằm gọn gàng bên dưới bài viết này.</p>
+                <article>
+                    <h2>Làm chủ bố cục giao diện với CSS Flexbox</h2>
+                    <p class="meta">Đăng ngày 02/10/2026 bởi CodeGym Developer</p>
+                    <p>CSS Flexbox (Flexible Box Layout) là một mô hình dàn trang một chiều cực kỳ mạnh mẽ, giúp tối ưu hóa việc căn chỉnh và phân bổ không gian giữa các phần tử trong một khung chứa, ngay cả khi kích thước của chúng chưa xác định trước.</p>
+                    <p>Bằng cách kết hợp cấu trúc Flexbox lồng nhau (`flex-direction: column` ở khung bọc ngoài và `flex-direction: row` ở phần thân) cùng với Media Queries, trang web sẽ co giãn mượt mà và tương thích tốt trên mọi kích thước màn hình.</p>
+                </article>
             </main>
 
             <!-- 4. Sidebar (flex: 1) -->
             <aside class="sidebar">
-                <h3>Thanh bên (Sidebar)</h3>
-                <div class="widget">
-                    <h4>Tin tức nhanh</h4>
-                    <p>Lộ trình học Lập trình Web Frontend hiện đại tại CodeGym.</p>
+                <div class="card">
+                    <h3>Chủ đề hot</h3>
+                    <ul>
+                        <li><a href="#">Lộ trình Frontend 2026</a></li>
+                        <li><a href="#">Bí quyết phối hợp Flexbox & Grid</a></li>
+                        <li><a href="#">Tối ưu trải nghiệm Mobile-First</a></li>
+                    </ul>
                 </div>
-                <div class="widget">
-                    <h4>Quảng cáo</h4>
-                    <p>Đăng ký khóa học Fullstack thực chiến ngay hôm nay.</p>
+                <div class="card promo">
+                    <h3>Khóa học đề xuất</h3>
+                    <p>Tham gia chương trình đào tạo Fullstack Web Developer tại CodeGym để bứt phá kỹ năng lập trình.</p>
                 </div>
             </aside>
         </div>
 
         <!-- 5. Footer -->
         <footer class="footer">
-            <p>&copy; 2026 Flexbox Responsive Layout. Tất cả các quyền được bảo lưu.</p>
+            <p>&copy; 2026 Responsive Flexbox Layout. Tất cả các quyền được bảo lưu.</p>
         </footer>
     </div>
 
